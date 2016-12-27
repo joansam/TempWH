@@ -1,6 +1,6 @@
-#modname "T"
-#description "All Warhammer nations, mostly compatible with each other (also no lizardmen for some reason)."
-#version 0.59
+#modname "SlaaneshTMP"
+#description "WHComplete Slaanesh nation being edited"
+#version 1.0
 
 -- SLAANESH WARHOST
 
@@ -849,7 +849,7 @@
 #prec 10
 #mapmove 2
 #ap 12
-#holy
+
 #magicskill 7 1
 #magicskill 8 1
 #gcost 55
@@ -865,6 +865,7 @@
 #stealthy 10
 #coldres 3
 #userestricteditem 6566
+#holy
 #end
 
 -- Foreignrec Cultist
