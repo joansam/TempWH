@@ -1,6 +1,7 @@
 By JoanSam
 -- Planned changes:
 -- Decrease cost of autocosted sorcerer line
+-- FIX AVATAR DESC
 
 -- Look at commanders' stats, specifically HP, Prot/Invuln, Attacks (including Daemons)
 -- Keep working on modelling Marks and Gifts of Slaanesh
@@ -11,6 +12,8 @@ By JoanSam
 -- Consider adding chaos power...look at pros and cons w/magic power.
 -- Consider sacredness of base sorcerer
 
+--CHANGES STAGING
+--Daemon tentacle added, is magic and used by spawn and slaanesh avatar
 
 --Version 1.00 - Finished Changes:
 -- For more specific info, use the mod inspector. This is more of an explanation of the current faction.

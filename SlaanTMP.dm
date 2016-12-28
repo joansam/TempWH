@@ -2,6 +2,8 @@
 #description "WHComplete Slaanesh nation being edited"
 #version 1.0
 
+--Start copying here
+
 -- SLAANESH WARHOST
 
 --Version 1.00 - Finished Changes:			(By JoanSam)
@@ -132,7 +134,7 @@
 
 #newweapon 1855
 #name "Daemon-forged Broad Sword"
-#dmg 6
+#dmg 8
 #magic
 #slash
 #armorpiercing
@@ -160,17 +162,24 @@
 
 #newweapon 1857
 #name "Slaaneshi Claws"
-#dmg 5
+#dmg 0
 #magic
 #slash
 #armorpiercing
 #att 0
 #def 0
-#len 1
+#len 3
 #bonus
 #sound 38
 #nratt 2
 #end
+
+#newweapon 1861
+#copyweapon 85
+#name "Daemon Tentacle"
+#magic
+#end
+
 
 #newweapon 1858
 #name "Sliverslash"
@@ -837,7 +846,7 @@
 #spr1 "./Warhammer-Complete/slaanesh_cultist_1.tga"
 #spr2 "./Warhammer-Complete/slaanesh_cultist_2.tga"
 #name "Slaanesh Cultist"
-#descr "Slaanesh is worshipped by His cultists through the most perverse and decadent self-indulgence, oft in the form of great orgies involving every vice conceivable. Indeed, while the cults of Slaanesh are not nearly as insidious or secretive as those of Tzeentch, His popularity among mortals makes them spread like wild fire. And so, the cults of Slaanesh are many, and they flourish within the lands of Men."
+#descr "Slaanesh is worshipped by His cultists through the most perverse and decadent self-indulgence, oft in the form of great orgies involving every vice conceivable. Indeed, while the cults of Slaanesh are not nearly as insidious or secretive as those of Tzeentch, His popularity among mortals makes them spread like wild fire. And so, the cults of Slaanesh are many, and they flourish within the lands of Men. When not corrupting the enemy, cultists often bring fresh sacrifices to Slaanesh to gain his gifts and his favor."
 #hp 10
 #size 2
 #mor 10
@@ -862,10 +871,10 @@
 #maxage 150
 #wastesurvival
 #mountainsurvival
-#stealthy 10
 #coldres 3
 #userestricteditem 6566
 #holy
+#stealthy 10
 #end
 
 -- Foreignrec Cultist
@@ -1385,6 +1394,7 @@
 #onebattlespell "Blessing"
 #wastesurvival
 #forestsurvival
+#fear 5
 #end
 
 -- Sigvald the Magnificent
@@ -1567,10 +1577,10 @@
 #ambidextrous 5
 #weapon 331 -- Gore
 #weapon 62 -- Bile
-#weapon 30 -- Venomous Bite
+--#weapon 30 -- Venomous Bite
 #weapon 203 -- Barbed Tail
-#weapon 85 -- Tentacle
-#weapon 1857 -- Slaanesh tentacle
+#weapon 1861 -- Tentacle
+#weapon 1857 -- Slaanesh claws
 #startage 150
 #maxage 5000
 #noleader
@@ -1911,9 +1921,11 @@
 #ambidextrous 3
 #weapon 1855 -- Daemon-forged Broad Sword
 #weapon 1852 -- Aura of Slaan
-#weapon 1857 -- Slaaneshi Claw
-#weapon 1857 -- Slaaneshi Claw
-#weapon 299 -- Enchanted Sickle
+#weapon 1857 -- Slaaneshi Claws
+#weapon 1857 -- Slaaneshi Claws
+#weapon 1861 -- Daemon Tentacle
+#weapon 1861 -- Daemon Tentacle
+-- #weapon 299 -- Enchanted Sickle - doesn't fit with sprite
 #armor 803
 #startage 40
 #maxage 10000
@@ -2728,3 +2740,4 @@ Priests: Weak. Can blood sacrifice."
 -- Thanks to llamabeast for the work on the Dom3 Mod!
 -- Taorec
 
+--End copying here
