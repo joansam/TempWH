@@ -1124,7 +1124,7 @@
 #spr2 "./Warhammer-Complete/Slaanesh_sorcerer_2.tga"
 #name "Sorcerer"
 #nametype 115
-#descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. Sorcerers with the Mark of Slaanesh, while not as magically inclined as those who follow Tzeentch, it is in their nature to desire it regardless. Thus is the way of Slaanesh Himself, for He desires mastery over magic, while He can never have it."
+#descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. Sorcerers with the Mark of Slaanesh, while not as magically inclined as those who follow Tzeentch, it is in their nature to desire it regardless. In particular, the sorcerers of Slaanesh crave knowledge of the magical realm, and pursue it voraciously. Thus is the way of Slaanesh Himself, for He desires mastery over magic, while He can never have it."
 #ap 12
 #mapmove 2
 #hp 10
@@ -1137,8 +1137,8 @@
 #mr 14
 #mor 13
 #custommagic 896 100 -- SAWB
-#gcost 10000
-#researchbonus 1
+#gcost 10015
+#researchbonus 2
 #rcost 1
 #weapon "Fist"
 #armor "Robes"
@@ -1147,6 +1147,7 @@
 #startage 45
 #maxage 1500
 #magicskill 4 1
+#holy
 #end
 
 -- Exalted Sorcerer of Slaanesh
@@ -1206,7 +1207,7 @@
 #coldres 3
 #magicskill 2 2
 #magicskill 7 3
-#custommagic 2944 500 -- SAWB
+#custommagic 2944 300 -- SAWB
 #gcost 10000
 #slowrec
 #rcost 1
@@ -1218,6 +1219,7 @@
 #maxage 5000
 #holy
 #magicskill 8 3
+#custommagic 2944 200
 #end
 
 
@@ -1395,6 +1397,7 @@
 #wastesurvival
 #forestsurvival
 #fear 5
+#magicpower 1
 #end
 
 -- Sigvald the Magnificent
@@ -1442,6 +1445,7 @@
 #forestsurvival
 #batstartsum1d6 6546
 #prot 15
+#magicpower 1
 #end
 
 -- Sigvald's bodyguards
@@ -1593,6 +1597,7 @@
 #mountainsurvival
 #coldres 3
 #itemslots 28672
+#magicpower 1
 #end
 
 -- Chosen Lord of Slaanesh
@@ -1942,7 +1947,7 @@
 #demon
 #onebattlespell "Divine Blessing"
 #neednoteat
-#magicpower 1
+#magicpower 2
 #magicskill 4 2
 #magicskill 5 3
 #coldres 25
@@ -1954,7 +1959,7 @@
 #batstartsum1d6 6538
 #spreaddom 1
 #magicskill 7 4
-#magicskill 8 4
+#magicskill 2 4
 #custommagic 20992 100
 #end
 
@@ -1999,7 +2004,7 @@
 #flying
 #demon
 #female
-#magicpower 1
+#magicpower 2
 #neednoteat
 #seduce 15
 #magicskill 7 3
@@ -2051,7 +2056,7 @@
 #name "Slaanesh"
 #spr1 "./Warhammer-Complete/avatar1.tga"
 #spr2 "./Warhammer-Complete/avatar2.tga"
-#descr "Slaanesh is the Chaos god of lust, excess, pleasure, perfection and hedonism. Slaanesh typically appears in a form which is male on the left side and female on the right, with two sets of devilish horns growing from its head. It can however assume any form; male, female, hermaphrodite or asexual.Slaanesh has chosen to appear this time as a human sorcerer on one of his Daemons, and will lead his armies to everlasting bliss."
+#descr "Slaanesh is the Chaos god of lust, excess, pleasure, perfection and hedonism. Slaanesh typically appears in a form which is male on the left side and female on the right, with two sets of devilish horns growing from its head. It can however assume any form; male, female, hermaphrodite or asexual. Slaanesh has chosen to appear this time as one of his Greater Daemons, and will lead his armies to everlasting bliss."
 #magicskill 2 1
 #magicskill 5 1
 #magicskill 7 2
@@ -2073,9 +2078,7 @@
 #demon
 #weapon 1852 -- Aura of Slaan
 #weapon 1857 -- Slaaneshi Claws
-#weapon 1857 -- Slaaneshi Claws
-#chaospower 2
-#magicpower 2
+#weapon 1857 -- Slaaneshi Claws#magicpower 2
 #coldres 25
 #fireres 15
 #shockres 25
