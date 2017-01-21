@@ -6,36 +6,44 @@
 
 -- SLAANESH WARHOST
 
---Version 1.00 - Finished Changes:			(By JoanSam)
---New unit: Exalted Daemon, with other Slaanesh mod sprite and summon spell.
--- Magic changes:
--- Blood scales with priest level.
+--VERSION 1.01 - JoanSam
+
+-- Changed sorc cost to 90 gold (from 60), sacred and +2 adept researcher. Added a flav phrase.
+-- Chosen reclimit removed - they're not that powerful compared to other WH faction sacreds.
+-- Daemon tentacle, Slaaneshi claws, Scythetalon all intrinsic weapons, Aura of Slaanesh #natural in case flaming/death weapons would affect it.
+-- Keeper of Secrets no longer wearing Light Chaos armor (not in sprite, also he has good base prot)
+
+--VERSION 1.00 - JoanSam
+
+-- Magic changes overview:
+-- Blood magic scales with priest level, to make explicit the connection between Daemons/Gifts and worship.
 -- Human magic focuses on Water, Air, Fire, in no order.
--- Daemon magic focuses on Water, Death, Astral, in that order.
+-- Daemon magic focuses on Water, Death, Astral, in that order - the daemons are closer to 'true' magic.
 -- Exalted Champion and Lord no longer have magic
 -- Custom blessings removed; they were a silly workaround. Sorcerers and daemons now have priest levels.
+-- Reintroduced cultist as B1H1, removed sorc's B1H1 and gave them S1 for ease of micro. Added flavor text.
 
+
+-- New unit: Exalted Daemon, with other Slaanesh mod Chaos Lord sprite and, new summon spell.
+
+-- The Exalted Daemon is a priest lvl 2 with inquisitor and stealthy. She has some minor magic, and can summon 1 Daemonette/turn.
 -- Cultist removed for now (in unit and in rec list), could add later if necessary. Should give them blood if they come back in though.
--- Lots of description changes...those who are interested can compare these to Sensori's original descriptions.
--- Commanders much more autocosted
--- Chammpion, Exalted Champion, Lord no longer have the magic item Chaos Armor, they now have the equipment. Actually, since it's magic armor you might want to do something about it.
--- Scythetalons no longer AP, debatable though.
+-- Lots of description changes
+-- Most commanders moved to autocost
+-- Champion, Exalted Champion, Lord no longer have the magic item Chaos Armor, they now have the equipment. Actually, since it's magic armor you might want to do something about it.
+-- Scythetalons no longer AP but have 2 attacks, debatable though.
 -- Aura of Slaanesh was broken, now does 33 stun damage instead of 5. Also now AoE1; it's an Aura in WH, not actually a weapon.
 -- Daemon-Forged broadswords and morningstars used by Chosen and Champions are now much more in line with WH stats. They have 2 attacks, and are not magic or AP. They are now named Chaos broadsword and morningstar. All units have been updated accordingly.
 -- Slaanesh Chaos Armor prot 17 -> 18, def penalty 2 -> 1.
 -- Sigvald the Magnificent: His sword, Sliverslash, now gets 6 attacks, from 2. Awe 3 -> 6. Added base prot 15 - otherwise headshots are brutal. No longer immortal.
--- Dameonette AP increased by 1.
 -- Sprite of Herald changed to Amazonian Chosen - used for Exalted Champion in the other Slaanesh mod. Also changed stealth 20 -> 60, added inquisitor tag (is priest 2). Can summon dameonettes.
--- All summon spells changed from Conjuration to Blood, path req often lowered by 1, pathreqs trimmed and number of 'gems' required multiplied by 3 (standard stuff).
+-- All summon spells changed from Conjuration to Blood, path req often lowered by 1, pathreqs trimmed and number of 'gems' required multiplied by 3 for blood slaves(standard stuff).
 -- Added an extra attack to fiends, fiends now summon 4 instead of 2...seemed underpowered
--- Keeper of Secrets hugely improved - all-around better stats and has 1d6 fiends in battle, among more typical changes. Magic completely redone.
+-- Keeper of Secrets hugely improved - all-around better stats, gifted with high Awe, regen, recup, and has 1d6 fiends in battle, among more typical changes.
 -- Items and armors changed to appropriate paths
 
 
-
-
-
-
+-- Below changes are Sensori's.
 
 -- Version 0.93 - Warriors of Slaanesh had the str of Warriors of Nurgle. Second Chosen of Slaanesh had reclimit 3. Pretender prices now autocalced and 20 off their prices. Added #natural to Chaos steed hoof, Slaaneshi claw and Scythetalon.
 
@@ -53,7 +61,7 @@
 -- Version 0.75 - First release of the mod. Using freshly made assets as well as altered Tzeentch/Nurgle warhost assets and a slightly altered sprite from Chaos Undivided by Sombre (the Keeper of Secrets, shading and nicer differences in the attack sprite) and the usual altered Chaos Undivided .dm. Built Dechala on the Dechala for Chaos Undivided that Noble713 (from the Shrapnel forums) made. Starting at such a high version due to it not being likely that I would release 100 releases... Not that it's likely there will be 25, either, but it sounds nicer, and is more in line with the other mods.
 
 --nationslot 159
---weaponslots 1850 - 1860
+--weaponslots 1851 - 1860
 --armor slot 801, 803, 804
 --unitslots 6500 - 6546
 --siteslots 1950 - 1951
@@ -62,86 +70,75 @@
 --Magic item ID 969
 
 -------- WEAPONS --------
-#newweapon 1850
-#name "Chaos steed hoof"
-#dmg 15
-#att 1
-#def 0
-#len 0
-#bonus
-#nostr
-#blunt
-#sound 38
-#end
 
 #newweapon 1851
-#name "Scythetalon"
-#dmg 6
+#name "Daemonic Scythetalons"
+#nratt 2
+#dmg 5
 #att 0
-#def 0
+#def 2
 #len 2
 #magic
 #rcost 0
 #slash
-
 #sound 38
+#bonus
 #end
 
 #newweapon 1852
 #name "Aura of Slaanesh"
+#dt_paralyze
 #dmg 33
+#aoe 1
 #nostr
 #magic
 #armornegating
 #mrnegates
-#dt_paralyze
 #unrepel
 #att 0
 #def 0
 #len 0
 #bonus
+#natural
 #rcost 0
-#aoe 1
 #end
 
 #newweapon 1853
 #name "Chaos Broadsword"
 #dmg 6
-
 #slash
-
 #att 1
 #def 0
 #len 2
-#rcost 3
+#rcost 4
 #sound 8
 #nratt 2
 #end
 
 #newweapon 1854
 #name "Daemonic Whip"
-#dmg 2
+#dmg 1
 #magic
 #armorpiercing
 #slash
 #fire
-#att 1
+#att 2
 #def 1
-#len 5
+#len 4
 #rcost 2
 #sound 9
 #end
 
 #newweapon 1855
-#name "Daemon-forged Broad Sword"
+#name "Daemon-Forged Blade"
 #dmg 8
 #magic
 #slash
 #armorpiercing
-#att 1
-#def 0
-#len 2
-#rcost 5
+#att 3
+#def 1
+#len 3
+#rcost 10
 #sound 8
 #bonus
 #nratt 2
@@ -161,13 +158,13 @@
 #end
 
 #newweapon 1857
-#name "Slaaneshi Claws"
-#dmg 0
+#name "Daemonic Claws"
+#dmg 6
 #magic
 #slash
 #armorpiercing
-#att 0
-#def 0
+#att 2
+#def 1
 #len 3
 #bonus
 #sound 38
@@ -176,8 +173,18 @@
 
 #newweapon 1861
 #copyweapon 85
-#name "Daemon Tentacle"
+#name "Daemonic Tentacles"
+#dmg 0
+#nratt 2
 #magic
+#end
+
+#newweapon 1862
+#copyweapon 13
+#name "Chaos Warhammer"
+#def -2
+#att 1
+#dmg 8
 #end
 
 
@@ -191,18 +198,16 @@
 #def 0
 #len 3
 #sound 8
-#nratt 6
+#nratt 4
 #end
 
 #newweapon 1859
 #name "Chaos Morningstar"
-
-
 #pierce
 #blunt
 #dmg 6
-#att 1
-#def -2
+#att 2
+#def -3
 #len 3
 #flail
 #rcost 3
@@ -288,6 +293,7 @@
 #reclimit 8
 #berserk 2
 #undisciplined
+#coldres 5
 #end
 
 -- Minotaur of Slaanesh
@@ -326,6 +332,7 @@
 #trample
 #pillagebonus 1
 #awe 1
+#coldres 10
 #end
 
 -- Slaangor
@@ -361,6 +368,7 @@
 #pillagebonus 1
 #stealthy 0
 #awe 1
+#coldres 7
 #end
 
 -- Gor of Slaanesh
@@ -394,6 +402,7 @@
 #pillagebonus 1
 #forestsurvival
 #stealthy 0
+#coldres 7
 #end
 
 -- Ungor of Slaanesh
@@ -425,6 +434,7 @@
 #armor "Shield"
 #pillagebonus 1
 #forestsurvival
+#coldres 7
 #end
 
 -- Ungor Raider
@@ -457,6 +467,7 @@
 #weapon 9
 #pillagebonus 1
 #forestsurvival
+#coldres 7
 #end
 
 -- Forsaken
@@ -482,7 +493,7 @@
 #chaosrec 1
 #rcost 1
 #itemslots 15488
-#coldres 3
+#coldres 7
 #weapon 85
 #weapon 600
 #armor "Leather Hauberk"
@@ -523,7 +534,7 @@
 #gcost 11
 #chaosrec 1
 #rcost 1
-#coldres 3
+#coldres 5
 #weapon "Axe"
 #weapon "Throwing Axe"
 #armor "Iron Cap"
@@ -565,7 +576,7 @@
 #ap 12
 #gcost 11
 #chaosrec 1
-#coldres 3
+#coldres 5
 #rcost 1
 #weapon "Morningstar"
 #armor "Iron Cap"
@@ -608,7 +619,7 @@
 #gcost 25
 #chaosrec 2
 #rcost 1
-#coldres 3
+#coldres 5
 #itemslots 13446
 #weapon "Morningstar"
 #weapon 56
@@ -628,10 +639,10 @@
 #spr2 "./Warhammer-Complete/Warrior_of_Slaanesh_hammer_2.tga"
 #name "Warrior of Slaanesh"
 #nametype 115
-#descr "Chaos Warriors are fighters of unmatched prowess. Their strength is infernal and their bodies as tough as the Iron Mountains. Imbued with the power of Chaos and encased in suits of hell-forged armor, a Chaos Warrior is equal to several battle-hardened mortal men. They are no longer truly human, but living weapons, honed perfectly for the bloody task before them."
+#descr "Chaos Warriors are fighters of unmatched prowess. Their strength is infernal and their bodies as tough as the Iron Mountains. Imbued with the power of Chaos and encased in armor, a Chaos Warrior is equal to several battle-hardened mortal men. They are no longer truly human, but living weapons, honed perfectly for the bloody task before them."
 #ap 12
 #mapmove 1
-#hp 13
+#hp 18
 #size 2
 #enc 2
 #str 12
@@ -639,12 +650,11 @@
 #def 12
 #prec 10
 #mr 11
-#mor 13
-#gcost 20
+#mor 15
+#gcost 30
 #chaosrec 1
 #rcost 1
-#coldres 3
-#weapon "Hammer"
+#coldres 5
 #armor "Full Helmet"
 #armor 801
 #armor "Kite Shield"
@@ -652,6 +662,7 @@
 #mountainsurvival
 #startage 26
 #maxage 900
+#weapon 1862
 #end
 
 
@@ -662,10 +673,10 @@
 #spr2 "./Warhammer-Complete/Warrior_of_Slaanesh_2.tga"
 #name "Warrior of Slaanesh"
 #nametype 115
-#descr "Chaos Warriors are fighters of unmatched prowess. Their strength is infernal and their bodies as tough as the Iron Mountains. Imbued with the power of Chaos and encased in suits of hell-forged armor, a Chaos Warrior is equal to several battle-hardened mortal men. They are no longer truly human, but living weapons, honed perfectly for the bloody task before them."
+#descr "Chaos Warriors are fighters of unmatched prowess. Their strength is infernal and their bodies as tough as the Iron Mountains. Imbued with the power of Chaos and encased in armor, a Chaos Warrior is equal to several battle-hardened mortal men. This warrior bears the Mark of Slaanesh, strengthening his lust and desire for battle."
 #ap 12
 #mapmove 1
-#hp 13
+#hp 18
 #size 2
 #str 12
 #enc 2
@@ -673,12 +684,12 @@
 #def 12
 #prec 10
 #mr 11
-#mor 13
-#gcost 20
+#mor 15
+#gcost 30
 #chaosrec 1
 #rcost 1
-#coldres 3
-#weapon "Broad Sword"
+#coldres 5
+#weapon 1853
 #armor "Full Helmet"
 #armor 801
 #armor "Kite Shield"
@@ -696,10 +707,10 @@
 #spr2 "./Warhammer-Complete/chaosknight_2SL.tga"
 #name "Chaos Knight"
 #nametype 115
-#descr "Chaos Knights are towering brutes clad in thickest plate, each section of armour crafted by a master daemonsmith. They ride to war with great lances, evil-looking polearms designed to impale and tear; and their blades and maces flicker with dark fire. Even the frightful reputation of the Chaos Knights is a weapon in its own right, crippling those who would stand against them before a single blow is struck."
+#descr "Chaos Knights are towering brutes clad in thickest plate, heavily armed and riding massive warhorses. They ride to war with great lances, evil-looking polearms designed to impale and tear; and cruel blades. This knight bears the Mark of Slaanesh, strengthening his lust and desire for battle."
 #ap 18
 #mapmove 2
-#hp 14
+#hp 19
 #size 3
 #str 14
 #enc 4
@@ -707,14 +718,10 @@
 #def 12
 #prec 10
 #mr 11
-#mor 13
-#coldres 3
+#mor 15
+#coldres 5
 #itemslots 13446
-#weapon "Broad Sword"
-#weapon "Chaos Steed hoof"
-#weapon "Lance"
 #armor "Full Helmet"
-#armor 801
 #armor "Kite Shield"
 #mounted
 #gcost 50
@@ -725,6 +732,10 @@
 #mountainsurvival
 #startage 31
 #maxage 900
+#armor 801
+#weapon "Lance"
+#weapon 1853
+#weapon 1220
 #end
 
 
@@ -738,7 +749,7 @@
 #descr "The presence of a Standard Bearer may mean the difference between a glorious victory and crushing defeat, for they raise the morale of their allies in battle, their standard paying homage to the Prince of Excess."
 #ap 12
 #mapmove 1
-#hp 13
+#hp 18
 #size 2
 #str 12
 #enc 2
@@ -746,11 +757,11 @@
 #def 12
 #prec 10
 #mr 12
-#mor 13
+#mor 14
 #gcost 20
 #chaosrec 1
 #rcost 1
-#coldres 3
+#coldres 5
 #weapon "Short Sword"
 #armor "Kite Shield"
 #armor "Full Helmet"
@@ -772,7 +783,7 @@
 #descr "There are those amongst the ranks of the Chaos Warriors who bear the favor of their patron god more so than their fellows. Known amongst their kind as Chosen, they possess supernatural abilities to aid them in their constant war against order and sanity, and are dreaded across the Old World and beyond."
 #ap 12
 #mapmove 2
-#hp 17
+#hp 22
 #size 2
 #str 14
 #enc 1
@@ -780,8 +791,8 @@
 #def 13
 #prec 10
 #mr 13
-#mor 15
-#gcost 60
+#mor 18
+#gcost 50
 #chaosrec 3
 #rcost 1
 #coldres 5
@@ -790,13 +801,11 @@
 #armor "Slaanesh Chaos Armor"
 #armor "Kite Shield"
 #holy
-#awe 1
 #itemslots 14470
 #mountainsurvival
 #wastesurvival
 #startage 34
 #maxage 1200
-#reclimit 5
 #end
 
 -- Chosen of Slaanesh #2
@@ -809,7 +818,7 @@
 #descr "There are those amongst the ranks of the Chaos Warriors who bear the favor of their patron god more so than their fellows. Known amongst their kind as Chosen, they possess supernatural abilities to aid them in their constant war against order and sanity, and are dreaded across the Old World and beyond."
 #ap 12
 #mapmove 2
-#hp 17
+#hp 22
 #size 2
 #str 14
 #enc 1
@@ -817,22 +826,20 @@
 #def 13
 #prec 10
 #mr 13
-#mor 15
-#gcost 60
+#mor 18
+#gcost 50
 #chaosrec 3
 #rcost 1
 #coldres 5
 #armor "Full Helmet"
 #armor "Slaanesh Chaos Armor"
 #armor "Kite Shield"
-#awe 1
 #holy
 #itemslots 14470
 #mountainsurvival
 #wastesurvival
 #startage 34
 #maxage 1200
-#reclimit 5
 #weapon 1853
 #end
 
@@ -849,7 +856,7 @@
 #descr "Slaanesh is worshipped by His cultists through the most perverse and decadent self-indulgence, oft in the form of great orgies involving every vice conceivable. Indeed, while the cults of Slaanesh are not nearly as insidious or secretive as those of Tzeentch, His popularity among mortals makes them spread like wild fire. And so, the cults of Slaanesh are many, and they flourish within the lands of Men. When not corrupting the enemy, cultists often bring fresh sacrifices to Slaanesh to gain his gifts and his favor."
 #hp 10
 #size 2
-#mor 10
+#mor 13
 #mr 11
 #enc 3
 #str 10
@@ -861,7 +868,7 @@
 
 #magicskill 7 1
 #magicskill 8 1
-#gcost 55
+#gcost 10000
 #chaosrec 3
 #rcost 1
 #weapon "Dagger"
@@ -871,7 +878,7 @@
 #maxage 150
 #wastesurvival
 #mountainsurvival
-#coldres 3
+#coldres 5
 #userestricteditem 6566
 #holy
 #stealthy 10
@@ -907,14 +914,14 @@
 #def 11
 #prec 12
 #mr 13
-#mor 15
-#gcost 10060
+#mor 18
+#gcost 10020
 #chaosrec 5
 #rcost 1
 #custommagic 768 25
 #okleader
 #undcommand 5
-#coldres 5
+#coldres 10
 #weapon "Mace"
 #weapon 1857
 #armor 801
@@ -929,7 +936,9 @@
 #regeneration 5
 #neednoteat
 #beastmaster 1
-#animalawe 1
+#awe 1
+#shatteredsoul 25
+#holy
 #end
 
 -- Ungor Raider Halfhorn
@@ -962,6 +971,7 @@
 #weapon 9
 #pillagebonus 1
 #forestsurvival
+#coldres 5
 #end
 
 -- Doombull of Slaanesh
@@ -1003,6 +1013,7 @@
 #trample
 #pillagebonus 1
 #onebattlespell 917
+#coldres 10
 #end
 
 -- Wargor
@@ -1040,6 +1051,7 @@
 #forestsurvival
 #stealthy 0
 #awe 1
+#coldres 7
 #end
 
 -- Marauder Chieftain
@@ -1067,7 +1079,7 @@
 #rcost 1
 #okleader
 #undcommand 5
-#coldres 3
+#coldres 5
 #itemslots 13446
 #weapon "Broad Sword"
 #weapon 56
@@ -1115,6 +1127,7 @@
 #startage 55
 #maxage 1500
 #stealthy 0
+#coldres 10
 #end
 
 -- Sorcerer of Slaanesh
@@ -1124,10 +1137,10 @@
 #spr2 "./Warhammer-Complete/Slaanesh_sorcerer_2.tga"
 #name "Sorcerer"
 #nametype 115
-#descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. Sorcerers with the Mark of Slaanesh, while not as magically inclined as those who follow Tzeentch, it is in their nature to desire it regardless. In particular, the sorcerers of Slaanesh crave knowledge of the magical realm, and pursue it voraciously. Thus is the way of Slaanesh Himself, for He desires mastery over magic, while He can never have it."
+#descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. Sorcerers with the Mark of Slaanesh, while not as magically inclined as those who follow Tzeentch, make useful followers. Many sorcerers of Slaanesh come from the civilized realms, where they studied the fundamental forms of magic to unlock its deepest secrets. They follow the Dark Prince in hopes of yet greater knowledge, proving invaluable scholars and theorists."
 #ap 12
 #mapmove 2
-#hp 10
+#hp 15
 #size 2
 #str 10
 #enc 3
@@ -1143,7 +1156,7 @@
 #weapon "Fist"
 #armor "Robes"
 #noleader
-#coldres 3
+#coldres 5
 #startage 45
 #maxage 1500
 #magicskill 4 1
@@ -1160,7 +1173,7 @@
 #descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. As a Chaos Sorcerer grows in power, he may be granted the title of 'Exalted'. Malicious they are, hateful, twisted further by the horrifying gifts given by the Prince of Chaos, yet they always seek for more in their never ending quest for magical power."
 #ap 12
 #mapmove 2
-#hp 15
+#hp 20
 #size 2
 #str 10
 #enc 3
@@ -1182,7 +1195,7 @@
 #poorleader
 #startage 150
 #maxage 2500
-#coldres 3
+#coldres 5
 #end
 
 -- Sorcerer Lord
@@ -1195,7 +1208,7 @@
 #descr "A Sorcerer Lord is the greatest of the Chaos Sorcerers, the epitome of a Sorcerer, not only in power but also in inhumanity. His understanding of the magical arts have grown exponentially, well beyond those of lesser Sorcerers, as has his depravity; in sheer magical power, he is only second to those who bear the mark of Tzeentch. Yet, his quest for more is unending, no matter the cost to his humanity, if there is any still left. The Prince of Excess may have gifted the Sorcerer Lord more than any other, it is still never going to quench his thirst for more. Thus is the way of Chaos."
 #ap 12
 #mapmove 2
-#hp 20
+#hp 30
 #size 2
 #str 12
 #enc 3
@@ -1204,7 +1217,7 @@
 #prec 10
 #mr 17
 #mor 14
-#coldres 3
+#coldres 5
 #magicskill 2 2
 #magicskill 7 3
 #custommagic 2944 300 -- SAWB
@@ -1219,7 +1232,7 @@
 #maxage 5000
 #holy
 #magicskill 8 3
-#custommagic 2944 200
+#custommagic 896 200
 #end
 
 
@@ -1233,7 +1246,7 @@
 #descr "The Champions of Chaos are the greatest fighters of the Chaos worshippers. Their presence on the battlefield can turn the tide of a closely fought combat. The Champions of Slaanesh surrender themselves completely to the excesses that are personified by their god, the Dark Prince."
 #ap 12
 #mapmove 2
-#hp 18
+#hp 25
 #size 2
 #str 14
 #enc 1
@@ -1241,7 +1254,7 @@
 #def 13
 #prec 12
 #mr 13
-#mor 15
+#mor 17
 #gcost 10000
 #chaosrec 5
 #rcost 1
@@ -1273,7 +1286,7 @@
 #descr "The Champions of Chaos are some of the greatest fighters of the Chaos worshippers, and often the next step on the path of a Champion towards eventual Daemonhood (or faltering in their path and becoming a Spawn of Chaos) is to become an Exalted Champion, or as they are otherwise known, an Exalted Hero. Armed with an even greater array of Daemonic gifts than a regular Champion, they are, indeed, formidable foes to those who stand before them. They roam across the lands, seeking duels to the death with others of their kind."
 #ap 12
 #mapmove 2
-#hp 22
+#hp 28
 #size 2
 #str 14
 #enc 1
@@ -1281,7 +1294,7 @@
 #def 14
 #prec 10
 #mr 15
-#mor 15
+#mor 17
 #gcost 10000
 #chaosrec 8
 #rcost 1
@@ -1316,7 +1329,7 @@
 #descr "Of all the mortal warriors across the civilisations of the world, Chaos Lords are the most feared, for they are truly like gods amongst men. The Lord of Slaanesh rides to war on a serpent-like mount of Slaanesh, a daemonic creature gifted to the greatest of Slaanesh's mortal followers, his powers beyond those of any regular Champion."
 #ap 20
 #mapmove 3
-#hp 27
+#hp 35
 #size 3
 #ressize 2
 #str 15
@@ -1325,7 +1338,7 @@
 #def 16
 #prec 11
 #mr 17
-#mor 17
+#mor 18
 #itemslots 13446
 #weapon "Enchanted Spear"
 #weapon "Aura of Slaanesh"
@@ -1364,7 +1377,7 @@
 #descr "During the times of Aenarion, Dechala was a beautiful High Elf princess, given to a Daemon Prince of Slaanesh by her family to save their own lives. Driven mad with hatred, Dechala sold her soul to Slaanesh for the chance to exact revenge on her family; Slaanesh accepted, and with His aid, Dechala exacted a terrible and bloody vengeance upon her kinsmen. Now, she is mutated beyond recognition, making her a creature of Chaos more akin to a Daemon than a mortal; she has six arms and her legs have been replaced by the body of a snake. She has beauty that only Slaanesh may grant, but it is as unearthly and disturbing as it is irresistible. Her visage evokes loathing as much as it arouses pleasure."
 #ap 15
 #mapmove 3
-#hp 25
+#hp 32
 #size 2
 #str 16
 #enc 1
@@ -1411,7 +1424,7 @@
 #ap 13
 #mapmove 2
 #enc 1
-#hp 34
+#hp 44
 #size 2
 #str 16
 #enc 1
@@ -1446,6 +1459,7 @@
 #batstartsum1d6 6546
 #prot 15
 #magicpower 1
+#demon
 #end
 
 -- Sigvald's bodyguards
@@ -1470,7 +1484,7 @@
 #descr "Styrkaar was born to the Jerg of the Sortsvinaer tribe on the northern coast of Norsca. Ever since his childhood, he had been accompanied by a strange voice which bore the name Sle'zuzu, which aided him to do everything right. It was all for the Dark Prince, however; and in the end, as Styrkaar had become the Jerg of his tribe with Sle'zuzu's aid and led them in ever greater raids secretly in the name of the Prince of Chaos, Slaanesh made it known that Styrkaar's actions were indeed pleasing, and fused Styrkaar and Sle'zuzu, whom Styrkaar's warriors knew nothing of. They simply took his change to mean that he had been touched by the gods. And so, as time progressed, his favor with Slaanesh has become increasingly apparent; now, he rides into battle upon a strange serpent-steed. And his fame grows; he is said to have slaughtered another Champion of Slaanesh, Vandred the Majestic, and many warbands that roam the Chaos Wastes of various affiliations."
 #ap 20
 #mapmove 3
-#hp 30
+#hp 40
 #size 3
 #ressize 2
 #str 15
@@ -1515,7 +1529,7 @@
 #descr "In the past, Azazel was the chief of the Gerreon tribe, one of the twelve human tribes united by Sigmar, whom Azazel betrayed. After his betrayal, he fled to the Chaos Wastes where he pledged his eternal loyalty to the Dark Prince, and was in return gifted with Daemonhood. Now, he leads the armies of Slaanesh. But he is so much more than just that. Indeed, he sees into the very hearts and souls of men, and even their deepest desires and hidden passions are plain to him. With his silvery voice Azazel whispers to his opponents, promising them all they have ever desired if they abandon the folly of opposing Slaanesh and embrace the Prince of Chaos instead. And few are those who can resist his temptations; all who know of him dread to face him in battle, for the cost of losing to Azazel is not only th death of the body, but the damnation of the soul as well."
 #ap 20
 #mapmove 3
-#hp 70
+#hp 96
 #size 4
 #str 18
 #enc 1
@@ -1529,9 +1543,9 @@
 #magicskill 2 2
 #magicskill 1 1
 #itemslots 15490
+#weapon 1852
 #weapon 1856
 #weapon 1857
-#weapon "Aura of Slaanesh"
 #armor 803
 #startage 2600
 #maxage 10000
@@ -1577,27 +1591,29 @@
 #rcost 1
 #holy
 #berserk 3
-#invulnerable 20
 #ambidextrous 5
-#weapon 331 -- Gore
+#weapon 1852
 #weapon 62 -- Bile
 --#weapon 30 -- Venomous Bite
 #weapon 203 -- Barbed Tail
-#weapon 1861 -- Tentacle
-#weapon 1857 -- Slaanesh claws
+#weapon 1861 -- Daemonic Tentacle
+#weapon 1857 -- Daemonic claws
 #startage 150
 #maxage 5000
 #noleader
-#poisonres 15
-#awe 2
+#poisonres 10
+#awe 1
 #neednoteat
 #pierceres
 #wastesurvival
 #forestsurvival
 #mountainsurvival
-#coldres 3
+#coldres 15
 #itemslots 28672
 #magicpower 1
+#demon
+#fireres 10
+#shockres 10
 #end
 
 -- Chosen Lord of Slaanesh
@@ -1626,7 +1642,7 @@
 #itemslots 13446
 #weapon "Enchanted Spear"
 #weapon "Aura of Slaanesh"
-#weapon 1850
+#weapon 1220
 #armor "Full Helmet"
 #armor 801
 #armor "Shield"
@@ -1655,39 +1671,39 @@
 #newmonster 6535
 #spr1 "./Warhammer-Complete/daemonette1.tga"
 #spr2 "./Warhammer-Complete/daemonette2.tga"
-#name "Daemonette"
+#name "Daemonette of Slaanesh"
 #nametype 257
 #descr "Gifted with disturbing beauty, Daemonettes are the Lesser Daemons of Slaanesh. What unearthly delights they might pleasure your soul with none can say, but upon the reeking field of battle, pain is what they bring. Vicious, spiteful, yet loving in the fatal affections they lavish upon those who dare refuse their chaotic charms, Daemonettes are swift and deadly to all who cross their path. On lithe legs they surge across the battlefield, dancing from foe to foe, gifting each in turn with gaping wounds from their scythe-like talons."
-#ap 15
+#ap 14
 #mapmove 3
 #hp 12
 #prot 10
 #size 2
-#str 12
+#str 10
 #enc 1
-#att 13
-#def 13
+#att 10
+#def 12
 #prec 11
 #mr 13
 #mor 30
 #gcost 0
 #rcost 1
 #ambidextrous 3
-#itemslots 15488
-#weapon "Scythetalon"
-#weapon "Scythetalon"
+#itemslots 64640
 #startage 20
 #maxage 10000
-#poisonres 15
+#poisonres 5
 #demon
 #stealthy 0
-#awe 1
-#neednoteat
+#awe 2
 #holy
-#invulnerable 15
 #magicpower 1
 #female
 #weapon 1852
+#weapon 1851
+#coldres 10
+#fireres 5
+#shockres 5
 #end
 
 -- Herald of Slaanesh
@@ -1697,13 +1713,13 @@
 #spr2 "./Warhammer-Complete/forestamazonianchosen2.tga"
 #name "Herald of Slaanesh"
 #nametype 257
-#descr "Heralds of Slaanesh not only attend to Slaanesh's whimsical desires, but muster his armies, plot his campaigns and carry his creed to the mortal realm, returning to bring morsels of courtly intrigue to Slaanesh's ears. Such scraps can lead to the corrupting of a mortal ruler and the Dark Prince is always carefully attentive."
+#descr "Heralds of Slaanesh do not only attend to Slaanesh's whimsical desires. Though not poweful sorcerers, they are his ears in enemy lands, and his voice, whispering insidious rumors and corrupting the desires of the local nobility. They can also summon their sisters from the Void."
 #ap 14
 #mapmove 3
-#hp 14
+#hp 20
 #prot 10
 #size 2
-#str 14
+#str 12
 #enc 1
 #att 13
 #def 13
@@ -1713,30 +1729,31 @@
 #gcost 0
 #rcost 1
 #magicskill 2 1
-#custommagic 2560 100
 #ambidextrous 5
 #itemslots 15488
-#weapon "Scythetalon"
-#weapon "Scythetalon"
+#weapon 1852
 #startage 20
 #maxage 10000
-#poisonres 15
+#poisonres 10
 #demon
 #spy
-#awe 1
+#awe 3
 #female
-#neednoteat
 #okleader
 #expertundeadleader
 #holy
-#invulnerable 15
 #magicpower 1
-#stealthy 60
+#stealthy 20
 #magicskill 4 1
 #magicskill 7 2
 #magicskill 8 2
 #makemonsters1 6535
 #inquisitor
+#weapon 1854
+#weapon 1854
+#coldres 15
+#fireres 5
+#shockres 5
 #end
 
 -- Seeker of Slaanesh
@@ -1747,37 +1764,37 @@
 #name "Seeker of Slaanesh"
 #nametype 257
 #descr "Daemonettes often ride into battle upon elegant mounts that are swifter than any mortal steed. Like all Slaaneshi creatures, these lithe daemonic mounts possess a disturbingly hypnotic appearance and unmistakable sinuous beauty. These siren hunters use the speed of their steeds to toy with their mortal prey and often delay the moment of the kill in favour of prolonging the suffering of their quarry."
-#ap 30
+#ap 24
 #mapmove 3
 #hp 12
 #prot 10
 #size 3
 #ressize 2
-#str 14
+#str 12
 #enc 1
-#att 13
-#def 13
+#att 12
+#def 14
 #prec 11
 #mr 14
 #mor 30
 #gcost 0
 #rcost 1
 #ambidextrous 3
- #weapon 1852 #itemslots 13440 -- legless and armless
+#weapon 1852
+#itemslots 13440 -- legless and armless
 #startage 20
 #maxage 10000
-#poisonres 15
+#poisonres 5
 #mounted
 #demon
-#awe 1
-#neednoteat
+#awe 2
 #holy
-#invulnerable 15
 #magicpower 1
 #female
- #weapon 1851
 #weapon 1851
-#weapon 1851
+#coldres 10
+#fireres 5
+#shockres 5
 #end
 
 
@@ -1789,15 +1806,14 @@
 #name "Fiend of Slaanesh"
 #nametype 257
 #descr "Fiends are incredibly swift, able to skitter and scuttle across all manner of terrain at frightening speed. There is something unnameably disturbing about a Fiend's gait, for its twitching dance rocks it from side to side. In this way, a Fiend will take at least three or four steps for every pace it advances, splayed legs beating out an arrhythmic toccata that praises the glory of the Dark Prince of Chaos. The Fiends sing to one another as they run, emanating a high-pitched and pervasive chitter that few mortals consciously hear. Though a Fiend is perhaps frailer than other Daemons of the same stature, only a fool would underestimate its combat prowess."
-#ap 30
+#ap 26
 #mapmove 3
 #hp 25
 #prot 13
-#invulnerable 18
 #size 3
-#str 16
+#str 14
 #enc 1
-#att 14
+#att 13
 #def 13
 #prec 7
 #mr 15
@@ -1806,18 +1822,19 @@
 #rcost 1
 #noitem
 #ambidextrous 5
-#weapon "Scythetalon"
-#weapon "Scythetalon"
 #startage 20
 #maxage 10000
-#poisonres 15
+#poisonres 10
 #demon
-#neednoteat
 #holy
-#awe 2
+#awe 1
 #magicpower 1
-#weapon 1851
 #weapon 1852
+#weapon 1851
+#weapon 1851
+#coldres 15
+#fireres 10
+#shockres 10
 #end
 
 -- Chaos Fury
@@ -1848,11 +1865,10 @@
 #weapon "Claws"
 #startage 20
 #maxage 10000
-#poisonres 15
 #flying
 #demon
-#neednoteat
 #holy
+#coldres 10
 #end
 
 #newmonster 6543
@@ -1861,12 +1877,14 @@
 #name "Exalted Daemon of Slaanesh"
 #nametype 257
 #descr "The favored servants of the Dark Prince sometimes fall just short of full ascension to immortality. Or maybe one of His daemonic servants has proved itself worthy of reward. Either way, Slaanesh grants a mortal host the gift of possession by a powerful daemon, which mutates the host's body to serve its ends. These daemons must constantly exert their will to remain inside the mortal form, and are thus not quite as powerful as Daemon Princes. However, they delight in combat just as much as their brethren, and their magical power is still great by the standard of most mortal spellcasters."
-#ap 22
+#ap 20
 #mapmove 3
 #hp 54
+#heal
+#prot 13
 #size 3
-#str 18
-#enc 1
+#str 16
+#enc 3
 #att 18
 #def 16
 #prec 13
@@ -1878,11 +1896,7 @@
 #startdom 3
 #coldres 5
 #poisonres 25
-#invulnerable 10
-#weapon 1855
-#armor 801
 #itemslots 15494
-#startitem 969
 #startage 4000
 #maxage 10000
 #magicskill 2 1
@@ -1890,15 +1904,16 @@
 #expertleader
 #expertundeadleader
 #awe 2
-#flying
 #demon
 #female
 #magicpower 1
-#neednoteat
-#seduce 15
 #magicskill 7 2
 #custommagic 6656 200
 #magicskill 8 2
+#weapon 1852
+#weapon 1855
+#weapon 1851
+#armor 803
 #end
 
 -- Keeper of Secrets
@@ -1912,55 +1927,43 @@
 #ap 18
 #mapmove 3
 #enc 1
-#hp 80
+#hp 90
 #prot 20
-#size 4
-#str 24
+#size 5
+#str 22
 #att 16
 #def 16
 #prec 10
-#mr 20
+#mr 21
 #mor 30
 #gcost 0
 #rcost 1
-#ambidextrous 3
-#weapon 1855 -- Daemon-forged Broad Sword
-#weapon 1852 -- Aura of Slaan
-#weapon 1857 -- Slaaneshi Claws
-#weapon 1857 -- Slaaneshi Claws
-#weapon 1861 -- Daemon Tentacle
-#weapon 1861 -- Daemon Tentacle
--- #weapon 299 -- Enchanted Sickle - doesn't fit with sprite
-#armor 803
-#startage 40
+#regeneration 10
+#heal
+#ambidextrous 4
+#weapon 1852 -- Aura of Slaan#weapon 1857 -- Slaaneshi Claws
 #maxage 10000
 #magicskill 2 3
-#custommagic 23040 150
+#magicskill 4 2
+#magicskill 5 3
+#magicskill 7 4
+#custommagic 23040 300
 #holy
-#inspirational 1
 #goodleader
 #expertundeadleader
 #fear 10
 #awe 6
-#stealthy 0
 #poisonres 20
 #demon
-#onebattlespell "Divine Blessing"
-#neednoteat
 #magicpower 2
-#magicskill 4 2
-#magicskill 5 3
-#coldres 25
-#fireres 15
-#shockres 25
-#regeneration 10
-#heal
+#coldres 20
+#fireres 20
+#shockres 20
 #itemslots 31878
 #batstartsum1d6 6538
 #spreaddom 1
-#magicskill 7 4
-#magicskill 2 4
-#custommagic 20992 100
+#magicskill 8 4
+#weapon 1855
 #end
 
 -- Daemon Princess
@@ -1970,46 +1973,45 @@
 #spr2 "./Warhammer-Complete/daemonprincess2.tga"
 #name "Daemon Princess of Slaanesh"
 #nametype 257
-#descr "A Daemon Princess of immense power, the daemonic fate all Champions desire, this ancient being has decided that it is now time to destroy all of civilization and for her to become a true Goddess within this realm. Still true to Slaanesh, however, she would still only function as though a regent in this realm for the Dark God, who cannot manifest outside the Realm of Chaos."
+#descr "A Daemon Princess of immense power, the daemonic fate all Champions desire, this ancient being has been pulled through the Void to destroy the enemies of the Dark Prince. Inside the form of the possessed champion vast magical forces roil, and the power of the Void emanates from her body. It confounds and terrifies her lesser foes, leaving her free to vanquish enemy lords and spellcasters."
 #ap 22
 #mapmove 3
-#hp 66
+#hp 48
+#prot 15
 #size 3
-#str 19
+#str 16
 #enc 1
-#att 18
-#def 16
+#att 16
+#def 18
 #prec 13
 #mr 18
 #mor 30
 #gcost 0
 #rcost 1
-#pathcost 50
-#startdom 3
-#coldres 5
-#poisonres 25
-#invulnerable 10
-#weapon 1855
-#armor 801
+#regeneration 10
+#heal
+#coldres 15
+#poisonres 15
+#weapon 1852
 #itemslots 15494
-#startitem 969
 #startage 4000
 #maxage 10000
 #magicskill 5 2
 #magicskill 2 3
-#inspirational 1
 #expertleader
 #expertundeadleader
-#awe 2
+#awe 5
+#fear 5
 #flying
 #demon
 #female
 #magicpower 2
-#neednoteat
-#seduce 15
 #magicskill 7 3
 #custommagic 6656 200
 #magicskill 8 3
+#weapon 1855
+#fireres 15
+#shockres 15
 #end
 
 ----------- PRETENDERS - Avatars of Slaanesh
@@ -2020,12 +2022,12 @@
 #newmonster 4215
 #nametype 115
 #startdom 1
-#gcost 50
+#gcost 10000
 #pathcost 20
-#name "Slaanesh"
+#name "Avatar of Slaanesh"
 #spr1 "./Warhammer-Complete/avatarhum1.tga"
 #spr2 "./Warhammer-Complete/avatarhum2.tga"
-#descr "Slaanesh is the Chaos god of lust, excess, pleasure, perfection and hedonism. Slaanesh typically appears in a form which is male on the left side and female on the right, with two sets of devilish horns growing from its head. It can however assume any form; male, female, hermaphrodite or asexual. Slaanesh has chosen to appear this time as a human sorcerer on a wave of magical energy, and will lead his armies to everlasting bliss. But the Dark Prince is merely using this illusion of a body for convenience - life does not flow through it, nor does Slaanesh's mind inhabit it."
+#descr "Slaanesh is the Chaos god of lust, excess, pleasure, perfection and hedonism. Slaanesh typically appears in a form which is male on the left side and female on the right, with two sets of devilish horns growing from its head. It can however assume any form; male, female, hermaphrodite or asexual. Slaanesh has chosen to appear this time as a human sorcerer on a wave of magical energy, and will lead his armies to everlasting bliss. But the Dark Prince is merely using this illusion of a body for convenience - life does not flow through it, nor does Slaanesh's mind inhabit it. The body is pure Chaos energy, harnessed to his will."
 #magicskill 2 2
 #magicskill 1 1
 #magicskill 0 1
@@ -2034,8 +2036,7 @@
 #str 10
 #def 12
 #enc 3
-#weapon "fist"
-#mor 50
+ #mor 50
 #inanimate
 #magicbeing
 #mapmove 3
@@ -2044,6 +2045,14 @@
 #ap 15
 #size 3
 #enc 0
+#demon
+#coldres 25
+#poisonres 20
+#fireres 20
+#shockres 20
+#weapon "fist"
+#heal
+#awe 4
 #end
 
 
@@ -2053,7 +2062,7 @@
 #startdom 3
 #gcost 270
 #pathcost 60
-#name "Slaanesh"
+#name "Avatar of Slaanesh"
 #spr1 "./Warhammer-Complete/avatar1.tga"
 #spr2 "./Warhammer-Complete/avatar2.tga"
 #descr "Slaanesh is the Chaos god of lust, excess, pleasure, perfection and hedonism. Slaanesh typically appears in a form which is male on the left side and female on the right, with two sets of devilish horns growing from its head. It can however assume any form; male, female, hermaphrodite or asexual. Slaanesh has chosen to appear this time as one of his Greater Daemons, and will lead his armies to everlasting bliss."
@@ -2066,26 +2075,24 @@
 #ap 18
 #mapmove 3
 #mr 24
-#str 24
+#str 22
 #att 16
 #def 16
 #enc 1
 #prec 15
 #ambidextrous 3
-#weapon "fist"
 #mor 50
 #inanimate
 #demon
-#weapon 1852 -- Aura of Slaan
-#weapon 1857 -- Slaaneshi Claws
-#weapon 1857 -- Slaaneshi Claws#magicpower 2
+#weapon 1852 -- Aura of Slaan#weapon 1857 -- Slaaneshi Claws
+#magicpower 2
 #coldres 25
-#fireres 15
-#shockres 25
+#fireres 20
+#shockres 20
 #poisonres 20
 #regeneration 10
 #heal
-#itemslots 31878
+#itemslots 31872
 #startage 40
 #maxage 10000
 #inspirational 1
@@ -2093,6 +2100,8 @@
 #expertundeadleader
 #fear 10
 #awe 6
+#weapon 1857
+#weapon 1861
 #end
 
 
@@ -2151,7 +2160,7 @@
 #end
 
 #newspell
-#name "Summon Seekers of Slaanesh"
+#name "Summon Seekers"
 #descr "With this spell, the caster summons a group of Seekers of Slaanesh, the outriders of the Prince of Chaos, darkling Daemonettes mounted on swift daemonic Steeds."
 #restricted 159
 #school 6
@@ -2165,7 +2174,7 @@
 #end
 
 #newspell
-#name "Summon Fiends of Slaanesh"
+#name "Summon Fiends"
 #descr "With this summoning, the caster brings forth a couple of Fiends of Slaanesh, strange creatures which are swift and terrible."
 #restricted 159
 #school 6
@@ -2179,21 +2188,21 @@
 #end
 
 #newspell
-#name "Summon Herald of Slaanesh"
-#descr "With this spell, the summoner brings forth a Herald of Slaanesh, one of the most favored Daemonettes of Slaanesh."
+#name "Summon Herald"
+#descr "With this spell, the summoner brings forth a Herald of Slaanesh, one of His most insidious tools. They can corrupt the civilized lands from afar, sowing disorder and lust before the arrival of the Dark Prince's armies."
 #restricted 159
 #school 6
 #researchlevel 5
 #path 0 7
 #pathlevel 0 3
-#fatiguecost 6000
+#fatiguecost 4000
 #effect 10021
 #damage 6536
 #nreff 1
 #end
 
 #newspell
-#name "Summon Exalted Daemon of Slaanesh"
+#name "Summon Exalted Daemon"
 #descr "With this spell, the sorcerer courts Slaanesh's favor with threescore victims. In return, one of his fellows is possessed by a daemon of great power to aid his men in their conquest of the civilized realms."
 #restricted 159
 #school 6
@@ -2207,7 +2216,7 @@
 #end
 
 #newspell
-#name "Summon Daemon Princess of Slaanesh"
+#name "Summon Daemon Princess"
 #descr "The caster proves his devotion to the Dark Prince with an offering of nearly a hundred mortals. In return, the Prince rewards this sorcerer with one of his most terrifying and alluring servants, a Daemon Princess to lay waste to the lands of mortal men."
 #restricted 159
 #school 6
@@ -2361,11 +2370,9 @@
 #secondarypath 1
 #secondarylevel 1
 #name "Slaanesh Chaos Armour"
-#descr "The armor worn by the elite Chosen of Slaanesh, it is forged by Daemons and given to the mortal followers of the Prince of Excess, becoming willing participants in the Great Game. It is extremely durable, but does not affect the movement of its wearer as much as other armor of its class would. It binds itself to the wearer, making it impossible to be removed; but many are those who welcome this gift."
+#descr "The armor worn by the elite Chosen of Slaanesh, it is forged by Daemons and given to the mortal followers of the Prince of Excess, becoming willing participants in the Great Game. It is extremely durable, but built to allow the wearer a wide range of movement."
 #type 5
 #armor "Slaanesh Chaos Armor"
-#cursed
-#bless
 #nofind
 #morale 5
 #end
@@ -2381,11 +2388,9 @@
 #secondarypath 1
 #secondarylevel 1
 #name "Slaanesh Chaos Armour"
-#descr "The armor worn by the elite Chosen of Slaanesh, it is forged by Daemons and given to the mortal followers of the Prince of Excess, becoming willing participants in the Great Game. It is extremely durable, but does not affect the movement of its wearer as much as other armor of its class would. It binds itself to the wearer, making it impossible to be removed; but many are those who welcome this gift."
+#descr "The armor worn by the elite Chosen of Slaanesh, it is forged by Daemons and given to the mortal followers of the Prince of Excess, becoming willing participants in the Great Game. It is extremely durable, but built to allow the wearer a wide range of movement."
 #type 5
 #armor "Slaanesh Chaos Armor"
-#cursed
-#bless
 #nofind
 #end
 
@@ -2566,8 +2571,9 @@
 #level 0
 #rarity 5
 #gems 2 2
-#gems 1 2
-#gems 4 1
+#gems 0 1
+#gems 1 1
+#gems 4 3
 #end
 
 #newsite 1951
@@ -2590,14 +2596,14 @@
 #era 2
 #idealcold 2
 #brief "To be touched by Slaanesh is to indulge in every perversion and to feel every sensation the world has to offer. And as such, those who follow the Prince of Excess have made themselves numb to anything that could be considered 'normal'; they need ever increasing sensation, ever increasing horrors to sate their dark desires."
-#descr "Slaanesh. The Prince of Excess. The Prince of Pleasure. It was His damning influence that lead to the creation of the Dark Elves, and their subsequent exile. Regardless of such historical facts, however, His cults flourish within the lands of Men, even though His mortal followers are generally motivated by self-indulgence rather than furthering their own personal power; His principle of indulging in every whim and vice easily makes Him the most popular of the Dark Gods within the 'civilized' lands. And to go even further, it is common enough for His Northman followers to gather in great numbers and form great Warhosts, as such things allow for even greater excesses than their regular raiding would; and whether it all ends with them dominating all of the civilized lands or being beaten back to the Chaos Wastes, it is of little consequence to them. Any sensation is worth feeling; such is the way of Slaanesh."
-#summary "Race: Slaanesh worshipping humans, Beastmen and Daemons. Ocean Sailing. Prefer cold scale +2.
+#descr "Slaanesh. The Prince of Excess. The Prince of Pleasure. It was His damning influence that lead to the creation of the Dark Elves, and their subsequent exile. His cults flourish within the lands of Men, even though His mortal followers are generally motivated by self-indulgence rather than furthering their own personal power; His principle of indulging in every whim and vice easily makes Him the most popular of the Dark Gods within the 'civilized' lands. His most feared followers are Daemons from the Void, possessing all manner of gruesome Gifts and immune to many of the dangers of the mortal realm."
+#summary "Race: Brutal Chaos Warriors, Beastmen and Daemons. Ocean Sailing. Prefer cold scale +2.
 
-Military: Powerful infantry and cavalry, ranged only through Beastmen, powerful magic and summons.
+Military: Powerful armored infantry and cavalry, limited ranged units, powerful magic and Daemonic summons.
 
-Magic: Water, Air, Blood, slight Astral. Some Death through Beastmen.
+Magic: Primarily Water, with Air, Fire, and Astral for human sorcerers and Blood, Death and Astral through Daemons. Some Death through Beastmen.
 
-Priests: Weak. Can blood sacrifice."
+Priests: Strong, including sorcerer and Daemonic priests. Can blood sacrifice."
 #flag "./Warhammer-Complete/flagSL.tga"
 
 
@@ -2739,8 +2745,5 @@ Priests: Weak. Can blood sacrifice."
 
 
 
-
 -- Thanks to llamabeast for the work on the Dom3 Mod!
 -- Taorec
-
---End copying here

@@ -1,12 +1,23 @@
 By JoanSam
--- Planned changes:
--- God choices are more varied for the other WH factions
+
+-- NOTES:
+Fixed daemonic appendages! Much more consistent now.
+Items could be substantially redone, and should be. Chaos armor if you can get the summon chaos dwarf spell.
+Need to fix res - most daemons have a ton of poison and no cold
+
+
+-- PLANNED CHANGES:
+-- Add seeker chariot - sprite in Eziky's mod.
+-- Consider adding more types of spawn - you have the sprites.
+-- Add more names...look in the manuals, online.
+-- Note: God choices are more varied for the other WH factions
 -- Also you'll have to recost the human avatar...at least make it 70 cheapgod20
--- DOUBLE CHECK KOS MAGIC PATHS, Inspector may be buggy but it says 50% in lieu of 150
--- Check if D causes Fear to increase...interessant...
+-- DOUBLE CHECK KoS MAGIC PATHS, Inspector may be buggy but it says 50% in lieu of 150
+-- Check if D causes Fear to increase...interessant...(it does).
 -- Remove Reclimit from Chosen, both types - also other Chaos factions.
 -- Decrease cost of autocosted sorcerer line
 -- FIX AVATAR DESC
+-- Nation desc needs updating, for magic and priests and general flavor.
 -- Look at commanders' stats, specifically HP, Prot/Invuln, Attacks (including Daemons)
 -- Keep working on modelling Marks and Gifts of Slaanesh
 -- Look at combat spells, consider adding Cacaphonic Choir, consider making the best W/D crosspath
@@ -17,15 +28,32 @@ By JoanSam
 -- Consider sacredness of base sorcerer
 -- Find a new sorc sprite; this one's shit
 
--- Decrease cost of other Chaos chosen to 50g (Khorne's are already.)
+
 
 --CHANGES STAGING
---Daemon tentacle added, is magic and used by spawn and slaanesh avatar
+-- Resistances
 
---Version 1.00 - Finished Changes:
+FINISHED CHANGES:
 -- For more specific info, use the mod inspector. This is more of an explanation of the current faction.
 -- (Basically every unit has been changed in some way.)
 
+
+
+--VERSION 1.01
+-- Increased HP of chaos warriors, chosen, and human commanders, along with morale. HP because in tabletop they have a lot more than humans, and morale because gift of Slaanesh is immune to Psychology, and the best way that translates in Dominions is higher morale.
+-- Chaos warriors 20 -> 30 gold, because stat increases.
+-- Added weapon, Chaos Warhammer - ID 1862, to achieve parity of Chaos Warriors. Previously only the sword one had 2 attacks. Chaos weapon theme is +att and -def from normal weapon version.
+-- Removed awe from Chosen, decreased cost of all Chaos chosen to 50g (Khorne's are already.)
+-- Reworked intrinsic daemonic weapons (scythetalons, tentacles, and claws), now they make sense. All have 2 attacks, claws and tentacles are AP and for the better daemons.
+-- Changed name of Daemonette to "Daemonette of Slaanesh" for consistency.
+-- Widespread revamp of summons - changed flavor, changed stats to intended - more elemental resistances and more diverse stats.
+-- Added lance to Chaos Knight, changed his broadsword to a chaos broadsword (2 attacks).
+-- Changed sorc cost to 90 gold (from 60), sacred and +2 adept researcher. Added a flav phrase.
+-- Chosen reclimit removed - they're not that powerful compared to other WH faction sacreds.
+-- Daemon tentacle, Slaaneshi claws, Scythetalon all intrinsic weapons, Aura of Slaanesh #natural in case flaming/death weapons would affect it.
+-- Keeper of Secrets no longer wearing Light Chaos armor (not in sprite, also he has good base prot)
+
+--VERSION 1.00:
 
 -- Magic changes overview:
 -- Blood magic scales with priest level, to make explicit the connection between Daemons/Gifts and worship.
@@ -43,7 +71,6 @@ By JoanSam
 -- Lots of description changes
 -- Most commanders moved to autocost
 -- Champion, Exalted Champion, Lord no longer have the magic item Chaos Armor, they now have the equipment. Actually, since it's magic armor you might want to do something about it.
--- Changed sorc cost to 90 gold (from 60), sacred and +2 adept researcher. Added a flav phrase.
 -- Scythetalons no longer AP but have 2 attacks, debatable though.
 -- Aura of Slaanesh was broken, now does 33 stun damage instead of 5. Also now AoE1; it's an Aura in WH, not actually a weapon.
 -- Daemon-Forged broadswords and morningstars used by Chosen and Champions are now much more in line with WH stats. They have 2 attacks, and are not magic or AP. They are now named Chaos broadsword and morningstar. All units have been updated accordingly.
