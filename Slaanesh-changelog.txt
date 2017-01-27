@@ -1,46 +1,50 @@
 By JoanSam
 
 -- NOTES:
+Altdorf is fucked, can only recruit a couple units
 Fixed daemonic appendages! Much more consistent now.
 Items could be substantially redone, and should be. Chaos armor if you can get the summon chaos dwarf spell.
-Need to fix res - most daemons have a ton of poison and no cold
 
 
--- PLANNED CHANGES:
+-- PLANNED CHANGES
+-- Consider reintroducing Phantasmagoria, or replacing Acquiescence with it.
+-- Look at Beastmen
+-- Cost increase probably in order for Chosen and maybe Warriors...they have 2 attacks.
 -- Add seeker chariot - sprite in Eziky's mod.
 -- Consider adding more types of spawn - you have the sprites.
 -- Add more names...look in the manuals, online.
 -- Note: God choices are more varied for the other WH factions
 -- Also you'll have to recost the human avatar...at least make it 70 cheapgod20
--- DOUBLE CHECK KoS MAGIC PATHS, Inspector may be buggy but it says 50% in lieu of 150
 -- Check if D causes Fear to increase...interessant...(it does).
--- Remove Reclimit from Chosen, both types - also other Chaos factions.
--- Decrease cost of autocosted sorcerer line
--- FIX AVATAR DESC
--- Nation desc needs updating, for magic and priests and general flavor.
--- Look at commanders' stats, specifically HP, Prot/Invuln, Attacks (including Daemons)
 -- Keep working on modelling Marks and Gifts of Slaanesh
 -- Look at combat spells, consider adding Cacaphonic Choir, consider making the best W/D crosspath
 -- Also look at items again, now that magic is so different.
--- Remove some attacks from monsters with newly doubled Slaaneshi Claws
--- Look at gods, esp. human form of Avatar
--- Consider adding chaos power...look at pros and cons w/magic power.
--- Consider sacredness of base sorcerer
 -- Find a new sorc sprite; this one's shit
 
 
 
 --CHANGES STAGING
--- Resistances
+-- Resistances - done, but maybe should be differently done.
+-- Get on the chariot?
 
 FINISHED CHANGES:
 -- For more specific info, use the mod inspector. This is more of an explanation of the current faction.
 -- (Basically every unit has been changed in some way.)
 
+-- VERSION 1.05
+-- Battlefield magic changes - reworked spell "Acquiescence". 20+5/lvl AN dmg, MR neg, friendlies only, range 25+ and AoE 5+. W2, Evo 5. Slicing Shards and Phantasmagoria removed so as not to give lots of unique battlemagic.
+                             -- added spell "Bliss in Torment" - basically Celestial Music for Slaanesh's daemons.
+-- Sorc given W1 instead of WAF random, Sorc Lord now has W4 and a +3 A/F random. Cost discounts for Sorc Lord, Exalted Sorc for being priest mages.
+-- Daemon resistances standardized - as they are made of Chaos energy, resistant to all elements. Base prot decreased by 2 for all daemons.
+-- Assorted minor stat changes - removed fear from daemon princess, removed stealthy from daemonettes, added recup to exalted daemon, etc.
+-- Avatars of Slaanesh cost changed - Daemon avatar is 350 points, human avatar is 130.
+-- Nation description changed - less lore, more clarity about what it actually is.
+-- Blood summons recosted, non-commanders a bit more numerous to make it less annoying to get lots of them.
 
+-- VERSION 1.04 (Yes, I skipped a couple of numbers). This is a big update, and 1.05 will be nice for the more definitive version.
 
---VERSION 1.01
--- Increased HP of chaos warriors, chosen, and human commanders, along with morale. HP because in tabletop they have a lot more than humans, and morale because gift of Slaanesh is immune to Psychology, and the best way that translates in Dominions is higher morale.
+-- New sprite - Eziky's cultist instead of the old one! It's much cooler - she's got a fun color scheme and interesting robes. Also cultists now have inquisitor - cause they go corrupt enemy lands.
+-- Increased HP of chaos warriors, chosen, and human commanders, along with morale and 1 strength. HP because in tabletop they have a lot more than humans, and morale because gift of Slaanesh is immune to Psychology, and the best way that translates in Dominions is higher morale.
 -- Chaos warriors 20 -> 30 gold, because stat increases.
 -- Added weapon, Chaos Warhammer - ID 1862, to achieve parity of Chaos Warriors. Previously only the sword one had 2 attacks. Chaos weapon theme is +att and -def from normal weapon version.
 -- Removed awe from Chosen, decreased cost of all Chaos chosen to 50g (Khorne's are already.)
@@ -48,6 +52,8 @@ FINISHED CHANGES:
 -- Changed name of Daemonette to "Daemonette of Slaanesh" for consistency.
 -- Widespread revamp of summons - changed flavor, changed stats to intended - more elemental resistances and more diverse stats.
 -- Added lance to Chaos Knight, changed his broadsword to a chaos broadsword (2 attacks).
+
+--VERSION 1.01
 -- Changed sorc cost to 90 gold (from 60), sacred and +2 adept researcher. Added a flav phrase.
 -- Chosen reclimit removed - they're not that powerful compared to other WH faction sacreds.
 -- Daemon tentacle, Slaaneshi claws, Scythetalon all intrinsic weapons, Aura of Slaanesh #natural in case flaming/death weapons would affect it.
