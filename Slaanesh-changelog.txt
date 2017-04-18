@@ -1,35 +1,129 @@
 By JoanSam
 
+Altdorf just plain doesn't have a reclist...maybe check out the old version
+
+Sombre message:
+Hey, 
+
+I hope I didn't cause any offense by asking for the chaos dwarf smith sprite? I've been thinking of the Warhammer mods as a big intertwined project, so I thought it would be cool if the Chaos factions needed Chaos dwarfs to forge their armor and whatnot. But I understand if it seemed like just a request to steal one of your sprites.
+Sorry.
+
 -- NOTES:
-Altdorf is fucked, can only recruit a couple units
+If you're keeping the Slaanbull...they should be size 4, have more than 30 hp
+Lizardmen are probably the wrong color in the score graphs
 Fixed daemonic appendages! Much more consistent now.
 Items could be substantially redone, and should be. Chaos armor if you can get the summon chaos dwarf spell.
+Dog, you should add LotR names to the High Elves...and maybe to Daemons?
+Chaos Armor should maybe be modelled on Full Plate, not Full Chain. 
+In that case, it will give 22 prot, -2 def, 3 enc, and cost 25r.
+Could probably rework a minotaur sprite to be a bestigor eventually.
+Naggarond has a Slaaneshi cultist unit, you should standardize them.
+Should figure something out for the Beastmen. Right now the sprites are shit for everything except Gors, which are just ok. Could just remove most of them...
 
+Tomb Kings skellies are everywhere...gotta ask for some assistance.
+
+Think about how to differentiate each god's Daemons, with an eye to the other nations' as well. Slaanesh's could have: Awe/Fear, a better Aura of Slaan, more def, maybe there are other weapon effects you could try?
+Might want to decrease HP a bit, check stats but I think they have less than the other Daemons. So def, they already have solid MR...what else? Maybe take away regen?
+Keeper's magic is super strong...what do?
+You should standardize to 1 Chaos Armor. It's the proper way to do it, and will make changing its stats easier in future.
+You're getting too many heroes...is there something about hero frequency somewhere?
+Consider giving the Daemon-Forged Blade 3 attacks...might help
+Pegasus Lords have nothing but a lance and a hoof
+Dwarf clan king not accompanied by retinue like it says...also something about his magic's fucked up
 
 -- PLANNED CHANGES
+
+-- Add more pretender choices, fairly limited atm
+-- Look at Furies, may be too good
+-- Exalted champ has no helmet, maybe should?
+-- Consider making a cool hypnotize-y weapon for Azazel - Azazel's Gaze or something.
+-- Look at sorc descriptions again.
+-- Update nation desc with forest and wasteland recruits.
+-- Exalted champ and Lord both get Awe...consider giving them other Gifts. Recup?
+-- Check for duplicate images, especially in Slaanesh
 -- Consider reintroducing Phantasmagoria, or replacing Acquiescence with it.
--- Look at Beastmen
--- Cost increase probably in order for Chosen and maybe Warriors...they have 2 attacks.
+-- Look at combat spells, consider adding Cacaphonic Choir, consider making the best W/D crosspath
 -- Add seeker chariot - sprite in Eziky's mod.
 -- Consider adding more types of spawn - you have the sprites.
--- Add more names...look in the manuals, online.
 -- Note: God choices are more varied for the other WH factions
--- Also you'll have to recost the human avatar...at least make it 70 cheapgod20
--- Check if D causes Fear to increase...interessant...(it does).
 -- Keep working on modelling Marks and Gifts of Slaanesh
--- Look at combat spells, consider adding Cacaphonic Choir, consider making the best W/D crosspath
 -- Also look at items again, now that magic is so different.
--- Find a new sorc sprite; this one's shit
+-- Silverslash might be better left as an AP 3 attack weapon. Although it isn't that satisfying, his bodyguards and Awe can handle regular troops. If he's a real hero he'll be able to kill tough enemies.
 
 
 
 --CHANGES STAGING
--- Resistances - done, but maybe should be differently done.
--- Get on the chariot?
+-- Bray Shaman has leadership 10 instead of 40.
+-- Slaanbull has 80 leadership and no Awe. Health 30 -> 40.
+-- Ungor raider (archer) given a dagger, previously had useless kick
+-- Removed ambidextrous from Daemon Avatar pretender, she doesn't have hand slots. Changed nametype to new Daemonic.
+-- Decreased Daemonette and Seeker defense by 1
+-- Champion cost 45 -> 70, Exalted Champ 55 -> 90, Chosen cost 70 -> 60, Chaos Warrior 35 -> 30, Standard Bearer 45 -> 40, Chaos Knight 60 -> 50
+-- Gave exalted champ +20 leadership
+-- Removed inquisitor from Herald and Cultist, potentially too powerful.
+-- Adjusted summon costs for Daemonettes, Seekers and Fiends slightly upward, especially Fiends - they were underpriced.
+-- Fiend health 25 -> 20, description changed to reflect their awesome offensive power.
+-- Exalted sorc description fix
+-- Decreased cost of sorc and exalted sorc by 5...apparently something is putting them 5 over the value shown in the inspector.
+-- Increased base rescost of mounted marauder to 6 and knight to 20, as per vanilla standards.
+-- Daemon-forged blade was an intrinsic weapon, now it isn't.
 
 FINISHED CHANGES:
--- For more specific info, use the mod inspector. This is more of an explanation of the current faction.
--- (Basically every unit has been changed in some way.)
+
+-- VERSION 1.10 (Cause I can do whatever I want with these numbers)
+
+-- New, improved sprites for Sigvald's Chosen, Chosen w/sword, Seeker, and Sorcerer!
+-- Name changes, including all-new names for Daemons! 
+	-- They were just random mishmashes of evil-sounding words ("Lovehate" and "Skinjob", anyone?) so I replaced them.
+	-- In place of the 99 old names, we have 161 names from online lists of Chaos daemons! Say hi to Tkk'arr'quoth and Vha'shaelhur!
+	-- Minor name changes of some humans to their tabletop names: 'Warrior of Slaaanesh' to 'Chaos Warrior' and so on.
+	-- Description changes to sorcerer line.
+-- Human rebalancing:
+	-- Increased Chosen cost to 70 gold and Warrior to 35, decreased their health by 4 (was 20 and 18, now 16 and 14). HP changes also apply to knight, standard bearer.
+	-- Increased MR of most human units by 1, as 12 seemed rather low for Chaos Warriors, who live in the most magical area on their earth. Forsaken MR +2.
+	-- Increased human morale by 2, to simulate the Mark of Slaanesh: "Immune to Psychology" effect.
+	-- Gave Chaos Champion Holy 1 and Chaos Lord B1 Holy 2, so that leading Chosen isn't a huge pain. Also made cultists poor leaders (10 guys).
+	-- Fixed Exalted Champ's leadership - had 20 for some reason, now has 40. +autocost, minor stat increases and benefits from Daemonic whip.
+	-- Fixed chaosrec values for Champ, Exalted Champ, and Lord.
+	-- Removed mountain survival for like...all human units. Isn't actually thematic, and Chaos should have slow movement.
+	-- Removed reclimit for foreignrec marauders. In the process, eliminated 2 gratuitous unit IDs.
+	-- Increased knight cost from 50 to 60, base defense from 12 to 13.
+	-- Messed with Chaos Broadsword, Hammer, and Morningstar. They have 2 attacks and I think the sword is better, so: 
+	-- Rescosts of 7 for sword, 6 for morningstar, 4 for hammer. Decreased hammer damage from 8 to vanilla 7.
+	-- Chaos Armor - Increased defense penalty and encumbrance from 1 to 2, and resource cost to 17, as Full Chain costs 17 and gives 3 enc and def penalty. Maybe Prot will be buffed slightly in future.
+	-- Sorcerer not sacred any more - wasn't really justified. Decreased autocalc cost by 5, he's 65 gold now.
+	-- Gave Chosen 2 enc (was 1, but they're human, not Daemonic).
+	-- Added appropriate Chaosrec to the sorcerer lineup, previously they were left out.
+	-- Removed slowrec from Chaos lord
+	-- Standard bearer now has chaos sword instead of normal one.
+	-- Made cultist stealth 60 instead of 50
+-- Beastmen rework:
+	-- Gave most beastmen the 'furs' armor, like Pangaean creatures have. Previously many had no armor. Also decreased cost to 9 for ungor and 10 for gor.
+	-- Removed Slaangor and Minotaur from recruitment pool. Neither of them looks very good...the minotaur is worse but the slaangor is the wrong sprite for its unit...too small and with a sword and shield, not an axe.
+	-- Slaanbull: 30 -> 45 HP, Size 3 -> 4, +15 gold.
+	-- Removed Awe from Wargor, he shouldn't have it. Also set him to autocost.
+	-- Removed reclimit from ungor raider - unnecessary.
+	-- Ungor raider halfhorn now leader of 40, not 10.
+	-- Bray-shaman's random changed from NS to NSD, made sacred.
+-- Hero rework:
+	-- Properly updated Sigvald - he's now much more in line with the other Daemons. And he's a B3 H3 priest, due to his religious importance. Silverlash now has 4 attacks but is not AP.
+	-- Dechala the Denied One now has D3B2H2, so she's somewhat useful. Resistances reworked, def and prot buffed in accordance with lore and added recuperation.
+	-- Azazel now more Daemon-y - has hp regen, recup, resistances, etc. Magic now A3W3, B3H3, with an 100% AW random. Sword has 3 attacks, from 1. A little bit less HP and magicpower 2.
+	-- Styrkaar improved - given W2A1B3H3 instead of just W1A1. Also recup and magicpower. Description improved a lot but still not great.
+	-- Chosen Chaos Lord multihero (and prophetshape of Chaos Lord, I now realize) now has B2H3 and buffed stats in accordance with old human hero changes.
+-- Assorted other changes below:
+
+-- Removed Aura of Slaanesh from Daemonette, Seeker, and Fiend. It also now doesn't affect friendlies or mindless. Was a bit too powerful on the weakest Daemons.
+-- Also, the whole Aura was borked - was paralyzing enemies, not doing stun damage. Fixed.
+-- Resistances - finished, heroes included - but not completely sure they'll stay this way. The powerful daemons now have a ton.
+-- Tinkered with MR on Daemons - 1 pt higher for Daemonette and Herald, 2 pts lower for Avatar and 1 for Keeper of Secrets.
+-- Keeper of Secrets Death 3 -> 2, although still has a random +3 with chance of death.
+-- Removed warhorse hoof attack from knight, just gave him the vanilla hoof. Not actually worth it, knights and everyone in vanilla have normal hooves.
+-- Fixed bug - Chaos Vortex now yields correct gems.
+-- Removed bite attack from Chaos Fury - 2 attacks are quite enough for a tiny little imp-thing.
+-- Standard bearer now has a helmet, like his sprite and the other chaos warriors.
+-- Increased Daemonic whip rescost, gave it 2 attacks.
+
 
 -- VERSION 1.05
 -- Battlefield magic changes - reworked spell "Acquiescence". 20+5/lvl AN dmg, MR neg, friendlies only, range 25+ and AoE 5+. W2, Evo 5. Slicing Shards and Phantasmagoria removed so as not to give lots of unique battlemagic.

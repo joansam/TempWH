@@ -6,8 +6,60 @@
 
 -- SLAANESH WARHOST
 
--- For more specific info, use the mod inspector. This is partially an explanation of the current faction.
--- (Basically every unit and spell has been changed in some way from pre-1.00 the version.)
+
+-- VERSION 1.10 (Cause I can do whatever I want with these numbers)
+
+-- New, improved sprites for Sigvald's Chosen, Chosen w/sword, Seeker, and Sorcerer!
+-- Name changes, including all-new names for Daemons! 
+	-- They were just random mishmashes of evil-sounding words ("Lovehate" and "Skinjob", anyone?) so I replaced them.
+	-- In place of the 99 old names, we have 161 names from online lists of Chaos daemons! Say hi to Tkk'arr'quoth and Vha'shaelhur!
+	-- Minor name changes of some humans to their tabletop names: 'Warrior of Slaaanesh' to 'Chaos Warrior' and so on.
+	-- Description changes to sorcerer line.
+-- Human rebalancing:
+	-- Increased Chosen cost to 70 gold and Warrior to 35, decreased their health by 4 (was 20 and 18, now 16 and 14). HP changes also apply to knight, standard bearer.
+	-- Increased MR of most human units by 1, as 12 seemed rather low for Chaos Warriors, who live in the most magical area on their earth. Forsaken MR +2.
+	-- Increased human morale by 2, to simulate the Mark of Slaanesh: "Immune to Psychology" effect.
+	-- Gave Chaos Champion Holy 1 and Chaos Lord B1 Holy 2, so that leading Chosen isn't a huge pain. Also made cultists poor leaders (10 guys).
+	-- Fixed Exalted Champ's leadership - had 20 for some reason, now has 40. +autocost, minor stat increases and benefits from Daemonic whip.
+	-- Removed mountain survival for like...all human units. Isn't actually thematic, and Chaos should have slow movement.
+	-- Removed reclimit for foreignrec marauders. In the process, eliminated 2 gratuitous unit IDs.
+	-- Increased knight cost from 50 to 60, base defense from 12 to 13.
+	-- Messed with Chaos Broadsword, Hammer, and Morningstar. They have 2 attacks and I think the sword is better, so: 
+	-- Rescosts of 7 for sword, 6 for morningstar, 4 for hammer. Decreased hammer damage from 8 to vanilla 7.
+	-- Chaos Armor - Increased defense penalty and encumbrance from 1 to 2, and resource cost to 17, as Full Chain costs 17 and gives 3 enc and def penalty. Maybe Prot will be buffed slightly in future.
+	-- Sorcerer not sacred any more - wasn't really justified. Decreased autocalc cost by 5, he's 65 gold now.
+	-- Gave Chosen 2 enc (was 1, but they're human, not Daemonic).
+	-- Added appropriate Chaosrec to the sorcerer lineup, previously they were left out.
+	-- Removed slowrec from Chaos lord
+	-- Standard bearer now has chaos sword instead of normal one.
+	-- Made cultist stealth 60 instead of 50
+-- Beastmen rework:
+	-- Gave most beastmen the 'furs' armor, like Pangaean creatures have. Previously many had no armor. Also decreased cost to 9 for ungor and 10 for gor.
+	-- Removed Slaangor and Minotaur from recruitment pool. Neither of them looks very good...the minotaur is worse but the slaangor is the wrong sprite for its unit...too small and with a sword and shield, not an axe.
+	-- Slaanbull: 30 -> 45 HP, Size 3 -> 4, +15 gold.
+	-- Removed Awe from Wargor, he shouldn't have it. Also set him to autocost.
+	-- Removed reclimit from ungor raider - unnecessary.
+	-- Ungor raider halfhorn now leader of 40, not 10.
+	-- Bray-shaman's random changed from NS to NSD, made sacred.
+-- Hero rework:
+	-- Properly updated Sigvald - he's now much more in line with the other Daemons. And he's a B3 H3 priest, due to his religious importance. Silverlash now has 4 attacks but is not AP.
+	-- Dechala the Denied One now has D3B2H2, so she's somewhat useful. Resistances reworked, def and prot buffed in accordance with lore and added recuperation.
+	-- Azazel now more Daemon-y - has hp regen, recup, resistances, etc. Magic now A3W3, B3H3, with an 100% AW random. Sword has 3 attacks, from 1. A little bit less HP and magicpower 2.
+	-- Styrkaar improved - given W2A1B3H3 instead of just W1A1. Also recup and magicpower. Description improved a lot but still not great.
+	-- Chosen Chaos Lord multihero (and prophetshape of Chaos Lord, I now realize) now has B2H3 and buffed stats in accordance with old human hero changes.
+-- Assorted other changes below:
+
+-- Removed Aura of Slaanesh from Daemonette, Seeker, and Fiend. It also now doesn't affect friendlies or mindless. Was a bit too powerful on the weakest Daemons.
+-- Also, the whole Aura was borked - was paralyzing enemies, not doing stun damage. Fixed.
+-- Resistances - finished, heroes included - but not completely sure they'll stay this way. The powerful daemons now have a ton.
+-- Tinkered with MR on Daemons - 1 pt higher for Daemonette and Herald, 2 pts lower for Avatar and 1 for Keeper of Secrets.
+-- Keeper of Secrets Death 3 -> 2, although still has a random +3 with chance of death.
+-- Removed warhorse hoof attack from knight, just gave him the vanilla hoof. Not actually worth it, knights and everyone in vanilla have normal hooves.
+-- Fixed bug - Chaos Vortex now yields correct gems.
+-- Removed bite attack from Chaos Fury - 2 attacks are quite enough for a tiny little imp-thing.
+-- Standard bearer now has a helmet, like his sprite and the other chaos warriors.
+-- Increased Daemonic whip rescost, gave it 2 attacks.
+
 
 -- VERSION 1.05
 -- Battlefield magic changes - reworked spell "Acquiescence". 20+5/lvl AN dmg, MR neg, friendlies only, range 25+ and AoE 5+. W2, Evo 5. Slicing Shards and Phantasmagoria removed so as not to give lots of unique battlemagic.
@@ -114,7 +166,7 @@
 
 #newweapon 1852
 #name "Aura of Slaanesh"
-#dt_paralyze
+
 #dmg 33
 #aoe 1
 #nostr
@@ -126,6 +178,9 @@
 #def 0
 #len 0
 #bonus
+#mind
+#friendlyimmune
+#dt_stun
 #end
 
 #newweapon 1853
@@ -135,14 +190,14 @@
 #att 1
 #def 0
 #len 2
-#rcost 4
+#rcost 7
 #sound 8
 #nratt 2
 #end
 
 #newweapon 1854
 #name "Daemonic Whip"
-#dmg 1
+#dmg 3
 #magic
 #armorpiercing
 #slash
@@ -150,8 +205,9 @@
 #att 2
 #def 1
 #len 4
-#rcost 2
+#rcost 10
 #sound 9
+#nratt 2
 #end
 
 #newweapon 1855
@@ -159,14 +215,12 @@
 #dmg 8
 #magic
 #slash
-#armorpiercing
 #att 3
 #def 1
 #len 3
 #rcost 10
 #sound 8
-#bonus
-#nratt 2
+#nratt 3
 #end
 
 #newweapon 1856
@@ -180,6 +234,7 @@
 #len 3
 #rcost 5
 #sound 8
+#nratt 3
 #end
 
 #newweapon 1857
@@ -208,17 +263,18 @@
 #copyweapon 13
 #name "Chaos Warhammer"
 #def -2
+#rcost 4
 #att 1
-#dmg 8
+#dmg 7
 #end
 
 
 #newweapon 1858
 #name "Sliverslash"
-#dmg 7
+#dmg 10
 #magic
 #slash
-#armorpiercing
+
 #att 0
 #def 0
 #len 3
@@ -235,7 +291,7 @@
 #def -3
 #len 3
 #flail
-#rcost 3
+#rcost 6
 #sound 11
 #nratt 2
 #end
@@ -260,9 +316,9 @@
 #name "Slaanesh Chaos Armor"
 #type 5
 #prot 18
-#enc 1
-#def -1
-#rcost 15
+#enc 2
+#def -2
+#rcost 17
 #end
 
 #newarmor 803
@@ -279,7 +335,7 @@
 #type 5
 #prot 18
 #enc 1
-#def 0
+#def -1
 #rcost 20
 #end
 
@@ -309,16 +365,17 @@
 #gcost 9
 #rcost 1
 #noitem
-#weapon 223
 #stealthy 0
 #animal
 #wastesurvival
 #forestsurvival
-#mountainsurvival
+
 #reclimit 8
 #berserk 2
 #undisciplined
 #coldres 5
+#armor 44
+#weapon 223
 #end
 
 -- Minotaur of Slaanesh
@@ -328,7 +385,7 @@
 #spr2 "./Warhammer-Complete/slaan_minotaur_2.tga"
 #name "Minotaur of Slaanesh"
 #nametype 109
-#descr "Minotaurs are massive bull-headed monstrosities that constantly hunger for blood and red meat. Even though they're less intelligent than the smaller Beastmen, they are unnaturally strong and powerful, which makes them quite formidable warriors. They gather in loose tribes ruled over by the strongest of their number, and when called to battle, they reach into the piles of weapons and armor heaped in offering before the herdstones, equipping themselves with the largest and most formidable weapons they can find."
+#descr "Minotaurs, also known as Bullgors, are massive monstrosities that constantly hunger for blood and red meat. Even though they're less intelligent than the smaller Beastmen, they are unnaturally strong and powerful, which makes them quite formidable warriors. They gather in loose tribes ruled over by the strongest of their number, and when called to battle, they reach into the piles of weapons and armor heaped in offering before the herdstones, equipping themselves with the largest and most formidable weapons they can find."
 #ap 15
 #mapmove 2
 #hp 26
@@ -356,7 +413,6 @@
 #berserk 4
 #trample
 #pillagebonus 1
-#awe 1
 #coldres 10
 #end
 
@@ -383,7 +439,6 @@
 #gcost 35
 #chaosrec 3
 #rcost 4
-#reclimit 8
 #startage 28
 #maxage 200
 #weapon "Broad Sword"
@@ -391,7 +446,6 @@
 #armor "Shield"
 #forestsurvival
 #pillagebonus 1
-#stealthy 0
 #awe 1
 #coldres 7
 #end
@@ -416,18 +470,18 @@
 #prot 4
 #mapmove 2
 #ap 14
-#gcost 13
+#gcost 10
 #chaosrec 1
 #rcost 1
-#stealthy 0
 #startage 22
 #maxage 150
 #weapon "Club"
-#armor "Shield"
 #pillagebonus 1
 #forestsurvival
-#stealthy 0
 #coldres 7
+#stealthy 0
+#armor "Shield"
+#armor 44
 #end
 
 -- Ungor of Slaanesh
@@ -449,17 +503,18 @@
 #prec 10
 #mapmove 2
 #ap 14
-#gcost 11
+#gcost 9
 #chaosrec 1
 #rcost 1
 #startage 20
 #maxage 80
-#stealthy 10
 #weapon "Spear"
-#armor "Shield"
-#pillagebonus 1
+ #pillagebonus 1
 #forestsurvival
 #coldres 7
+#armor "Shield"
+#stealthy
+#armor 44
 #end
 
 -- Ungor Raider
@@ -481,18 +536,17 @@
 #prec 10
 #mapmove 2
 #ap 14
-#gcost 13
+#gcost 9
 #chaosrec 1
 #rcost 1
 #startage 20
 #maxage 80
-#stealthy 15
-#reclimit 16
-#weapon "Short Bow"
-#weapon 9
 #pillagebonus 1
 #forestsurvival
 #coldres 7
+#armor 44
+#weapon "Short Bow"
+#stealthy 10
 #end
 
 -- Forsaken
@@ -506,9 +560,9 @@
 #hp 10
 #size 2
 #mor 30
-#mr 12
+#mr 14
 #enc 2
-#str 11
+#str 13
 #att 10
 #def 10
 #prec 10
@@ -525,7 +579,7 @@
 #pillagebonus 1
 #wastesurvival
 #forestsurvival
-#mountainsurvival
+
 #reclimit 8
 #regeneration 5
 #neednoteat
@@ -548,7 +602,7 @@
 #hp 11
 #size 2
 #mor 10
-#mr 10
+#mr 11
 #enc 3
 #str 11
 #att 10
@@ -567,18 +621,9 @@
 #armor "Shield"
 #pillagebonus 1
 #wastesurvival
-#mountainsurvival
 #end
 
 -- Foreignrec Marauder #1
-
-#newmonster 6544
-#copystats 6501
-#copyspr 6501
-#descr "Marauders are natural fighters, born into hardship and brought up in a world where surviving each day is no small victory. Only the strong and the capable prosper, for the weak are weeded out and killed. They have no time for plough or sickle, for their tools are the axe, the sword and the shield. What their own lands cannot provide, they take from the lands of lesser men."
-#reclimit 10
-#coldrec 2
-#end
 
 -- Marauder of Slaanesh #2
 
@@ -591,7 +636,7 @@
 #hp 11
 #size 2
 #mor 10
-#mr 10
+#mr 11
 #enc 3
 #str 11
 #att 10
@@ -608,18 +653,8 @@
 #armor "Leather Hauberk"
 #armor "Shield"
 #wastesurvival
-#mountainsurvival
+
 #pillagebonus 1
-#end
-
--- Foreignrec Marauder #2
-
-#newmonster 6545
-#copystats 6502
-#copyspr 6502
-#descr "Marauders are natural fighters, born into hardship and brought up in a world where surviving each day is no small victory. Only the strong and the capable prosper, for the weak are weeded out and killed. They have no time for plough or sickle, for their tools are the axe, the sword and the shield. What their own lands cannot provide, they take from the lands of lesser men."
-#reclimit 10
-#coldrec 2
 #end
 
 -- Chaos Marauder Horsemen
@@ -639,11 +674,11 @@
 #att 11
 #def 10
 #prec 10
-#mr 10
+#mr 11
 #mor 10
 #gcost 25
 #chaosrec 2
-#rcost 1
+#rcost 6
 #coldres 5
 #itemslots 13446
 #weapon "Morningstar"
@@ -653,7 +688,7 @@
 #armor "Shield"
 #mounted
 #wastesurvival
-#mountainsurvival
+
 #pillagebonus 1
 #end
 
@@ -662,19 +697,19 @@
 #newmonster 6504
 #spr1 "./Warhammer-Complete/Warrior_of_Slaanesh_hammer_1.tga"
 #spr2 "./Warhammer-Complete/Warrior_of_Slaanesh_hammer_2.tga"
-#name "Warrior of Slaanesh"
+#name "Chaos Warrior"
 #nametype 115
 #descr "Chaos Warriors are fighters of unmatched prowess. Their strength is infernal and their bodies as tough as the Iron Mountains. Imbued with the power of Chaos and encased in armor, a Chaos Warrior is equal to several battle-hardened mortal men. They are no longer truly human, but living weapons, honed perfectly for the bloody task before them."
 #ap 12
 #mapmove 1
-#hp 18
+#hp 14
 #size 2
 #enc 2
 #str 13
 #att 12
 #def 12
 #prec 10
-#mr 12
+#mr 13
 #mor 15
 #gcost 30
 #chaosrec 2
@@ -684,7 +719,7 @@
 #armor 801
 #armor "Kite Shield"
 #wastesurvival
-#mountainsurvival
+
 #startage 26
 #maxage 900
 #weapon 1862
@@ -696,19 +731,19 @@
 #newmonster 6505
 #spr1 "./Warhammer-Complete/Warrior_of_Slaanesh_1.tga"
 #spr2 "./Warhammer-Complete/Warrior_of_Slaanesh_2.tga"
-#name "Warrior of Slaanesh"
+#name "Chaos Warrior"
 #nametype 115
 #descr "Chaos Warriors are fighters of unmatched prowess. Their strength is infernal and their bodies as tough as the Iron Mountains. Imbued with the power of Chaos and encased in armor, a Chaos Warrior is equal to several battle-hardened mortal men. This warrior bears the Mark of Slaanesh, strengthening his lust and desire for battle."
 #ap 12
 #mapmove 1
-#hp 18
+#hp 14
 #size 2
 #str 13
 #enc 2
 #att 12
 #def 12
 #prec 10
-#mr 12
+#mr 13
 #mor 15
 #gcost 30
 #chaosrec 2
@@ -719,7 +754,7 @@
 #armor 801
 #armor "Kite Shield"
 #wastesurvival
-#mountainsurvival
+
 #startage 26
 #maxage 900
 #end
@@ -735,14 +770,14 @@
 #descr "Chaos Knights are towering brutes clad in thickest plate, heavily armed and riding massive warhorses. They ride to war with great lances, evil-looking polearms designed to impale and tear; and cruel blades. This knight bears the Mark of Slaanesh, strengthening his lust and desire for battle."
 #ap 18
 #mapmove 2
-#hp 19
+#hp 14
 #size 3
 #str 14
 #enc 4
 #att 12
-#def 12
+#def 13
 #prec 10
-#mr 12
+#mr 13
 #mor 15
 #coldres 5
 #itemslots 13446
@@ -751,16 +786,15 @@
 #mounted
 #gcost 50
 #chaosrec 3
-#rcost 6
+#rcost 20
 #ressize 2
 #wastesurvival
-#mountainsurvival
 #startage 31
 #maxage 900
 #armor 801
 #weapon "Lance"
 #weapon 1853
-#weapon 1220
+#weapon 56
 #end
 
 
@@ -774,28 +808,27 @@
 #descr "The presence of a Standard Bearer may mean the difference between a glorious victory and crushing defeat, for they raise the morale of their allies in battle, their standard paying homage to the Prince of Excess."
 #ap 12
 #mapmove 1
-#hp 18
+#hp 14
 #size 2
 #str 13
 #enc 2
 #att 12
 #def 12
 #prec 10
-#mr 12
-#mor 14
-#gcost 20
-#chaosrec 1
+#mr 13
+#mor 15
+#gcost 40
+#chaosrec 3
 #rcost 1
 #coldres 5
-#weapon "Short Sword"
-#armor "Kite Shield"
-#armor "Full Helmet"
 #armor 801
 #standard 1
 #wastesurvival
-#mountainsurvival
 #startage 28
 #maxage 900
+#weapon 1853
+#armor "Full Helmet"
+#armor "Kite Shield"
 #end
 
 -- Chosen of Slaanesh #1
@@ -808,29 +841,28 @@
 #descr "There are those amongst the ranks of the Chaos Warriors who bear the favor of their patron god more so than their fellows. Known amongst their kind as Chosen, they possess supernatural abilities to aid them in their constant war against order and sanity, and are dreaded across the Old World and beyond."
 #ap 12
 #mapmove 2
-#hp 20
+#hp 16
 #size 2
 #str 15
-#enc 1
+#enc 2
 #att 13
 #def 13
 #prec 10
-#mr 13
-#mor 18
-#gcost 50
+#mr 14
+#mor 17
+#gcost 60
 #chaosrec 2
 #rcost 1
 #coldres 5
-#weapon 1859
-#armor "Full Helmet"
-#armor "Slaanesh Chaos Armor"
 #armor "Kite Shield"
 #holy
 #itemslots 14470
-#mountainsurvival
+
 #wastesurvival
 #startage 34
 #maxage 1200
+#armor "Full Helmet"
+#weapon 1859
 #end
 
 -- Chosen of Slaanesh #2
@@ -843,16 +875,16 @@
 #descr "There are those amongst the ranks of the Chaos Warriors who bear the favor of their patron god more so than their fellows. Known amongst their kind as Chosen, they possess supernatural abilities to aid them in their constant war against order and sanity, and are dreaded across the Old World and beyond."
 #ap 12
 #mapmove 2
-#hp 20
+#hp 16
 #size 2
 #str 15
-#enc 1
+#enc 2
 #att 13
 #def 13
 #prec 10
-#mr 13
-#mor 18
-#gcost 50
+#mr 14
+#mor 17
+#gcost 60
 #chaosrec 2
 #rcost 1
 #coldres 5
@@ -861,7 +893,7 @@
 #armor "Kite Shield"
 #holy
 #itemslots 14470
-#mountainsurvival
+
 #wastesurvival
 #startage 34
 #maxage 1200
@@ -878,11 +910,11 @@
 #spr1 "./Warhammer-Complete/slaanesh_cultist_1.tga"
 #spr2 "./Warhammer-Complete/slaanesh_cultist_2.tga"
 #name "Slaanesh Cultist"
-#descr "Slaanesh is worshipped by His cultists through the most perverse and decadent self-indulgence, oft in the form of great orgies involving every vice conceivable. Indeed, while the cults of Slaanesh are not nearly as insidious or secretive as those of Tzeentch, His popularity among mortals makes them spread like wild fire. And so, the cults of Slaanesh are many, and they flourish within the lands of Men. When not corrupting the enemy, cultists often bring fresh sacrifices to Slaanesh to gain his gifts and his favor."
+#descr "Slaanesh is worshipped by His cultists through the most perverse and decadent self-indulgence, often in the form of great orgies involving every vice conceivable. Indeed, while the cults of Slaanesh are not nearly as insidious or secretive as those of Tzeentch, His popularity among mortals makes them spread like wild fire. And so, the cults of Slaanesh are many, and they flourish within the lands of Men. When not corrupting the enemy, cultists often bring fresh sacrifices to Slaanesh to gain his gifts and his favor."
 #hp 10
 #size 2
 #mor 13
-#mr 11
+#mr 14
 #enc 3
 #str 10
 #att 10
@@ -890,24 +922,21 @@
 #prec 10
 #mapmove 2
 #ap 12
-
 #magicskill 7 1
 #magicskill 8 1
 #gcost 10000
 #chaosrec 3
 #rcost 1
 #weapon "Dagger"
-#armor "Robes"
-#noleader
 #startage 30
 #maxage 150
 #wastesurvival
-#mountainsurvival
 #coldres 5
 #userestricteditem 6566
 #holy
-#stealthy 10
-#inquisitor
+#poorleader
+#stealthy 20
+#armor "Robes"
 #end
 
 -- Foreignrec Cultist
@@ -939,7 +968,7 @@
 #att 11
 #def 11
 #prec 12
-#mr 13
+#mr 15
 #mor 18
 #gcost 10020
 #chaosrec 5
@@ -956,7 +985,7 @@
 #startage 50
 #maxage 5000
 #forestsurvival
-#mountainsurvival
+
 #wastesurvival
 #berserk 3
 #regeneration 5
@@ -986,18 +1015,20 @@
 #prec 10
 #mapmove 2
 #ap 14
-#gcost 35
+#gcost 9990
 #chaosrec 3
 #rcost 1
 #startage 25
 #maxage 80
-#stealthy 25
-#poorleader
-#weapon "Short Bow"
-#weapon 9
+
+ #weapon 9
 #pillagebonus 1
 #forestsurvival
 #coldres 5
+#stealthy 20
+#okleader
+#armor 44
+#weapon "Short Bow"
 #end
 
 -- Doombull of Slaanesh
@@ -1019,7 +1050,7 @@
 #prec 8
 #mr 12
 #mor 15
-#gcost 95
+#gcost 10000
 #prot 6
 #chaosrec 4
 #rcost 6
@@ -1062,22 +1093,21 @@
 #prot 5
 #mr 12
 #mor 13
-#gcost 60
 #chaosrec 3
 #rcost 5
 #startage 35
 #maxage 200
 #pillagebonus 1
 #ambidextrous 2
-#weapon "Broad Sword"
-#weapon "Broad Sword"
+ #weapon "Broad Sword"
 #armor 118
 #armor "Chain Mail Cuirass"
 #okleader
 #forestsurvival
 #stealthy 0
-#awe 1
 #coldres 7
+#gcost 10000
+#weapon "Broad Sword"
 #end
 
 -- Marauder Chieftain
@@ -1098,7 +1128,7 @@
 #att 11
 #def 10
 #prec 10
-#mr 10
+#mr 11
 #mor 10
 #gcost 10015
 #chaosrec 3
@@ -1114,7 +1144,7 @@
 #armor "Shield"
 #mounted
 #wastesurvival
-#mountainsurvival
+
 #pillagebonus 1
 #sailing 999 3
 #end
@@ -1143,10 +1173,8 @@
 #magicskill 5 1
 #magicskill 6 1
 #researchbonus -4
-#custommagic 10240 100 -- NS
-#custommagic 14336 10 -- NSD
-#gcost 160
-#rcost 1
+#custommagic 14336 100 -- NS
+#custommagic 14336 10 -- NSD#rcost 1
 #weapon "Magic Staff"
 #okleader
 #forestsurvival
@@ -1154,6 +1182,8 @@
 #maxage 1500
 #stealthy 0
 #coldres 10
+#gcost 10010
+#holy
 #end
 
 -- Sorcerer of Slaanesh
@@ -1161,9 +1191,10 @@
 #newmonster 6523
 #spr1 "./Warhammer-Complete/Slaanesh_sorcerer_1.tga"
 #spr2 "./Warhammer-Complete/Slaanesh_sorcerer_2.tga"
-#name "Sorcerer"
+#name "Chaos Sorcerer"
 #nametype 115
-#descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. Sorcerers with the Mark of Slaanesh, while not as magically inclined as those who follow Tzeentch, make useful followers. Many sorcerers of Slaanesh come from the civilized realms, where they studied the fundamental forms of magic to unlock its deepest secrets. They follow the Dark Prince in hopes of yet greater knowledge, proving invaluable scholars and theorists."
+#descr "Chaos Sorcerers are madmen and malcontents all. Sorcerers with the Mark of Slaanesh, while not as magically inclined as those who follow Tzeentch, make useful followers. Many come from the civilized realms, where they studied the fundamental forms of magic to unlock its deepest secrets. They follow the Dark Prince in hopes of yet greater knowledge, proving invaluable scholars and theorists."
+#gcost 10000
 #ap 12
 #mapmove 2
 #hp 15
@@ -1175,7 +1206,6 @@
 #prec 10
 #mr 14
 #mor 13
-#gcost 10015
 #researchbonus 2
 #rcost 1
 #weapon "Fist"
@@ -1185,8 +1215,9 @@
 #startage 45
 #maxage 1500
 #magicskill 4 1
-#holy
+
 #magicskill 2 1
+#chaosrec 5
 #end
 
 -- Exalted Sorcerer of Slaanesh
@@ -1194,10 +1225,10 @@
 #newmonster 6524
 #spr1 "./Warhammer-Complete/exalted_slaanesh_sorcerer_1.tga"
 #spr2 "./Warhammer-Complete/exalted_slaanesh_sorcerer_2.tga"
-#name "Exalted Sorcerer"
+#name "Exalted Chaos Sorcerer"
 #nametype 115
-#descr "Those Champions of Chaos who seek mastery over the magical arts are known as Chaos Sorcerers, and they are madmen and malcontents all. As a Chaos Sorcerer grows in power, he may be granted the title of 'Exalted'. Malicious they are, hateful, twisted further by the horrifying gifts given by the Prince of Chaos, yet they always seek for more in their never ending quest for magical power."
-#gcost 9970
+#descr "As a Chaos Sorcerer grows in power, he may be granted the title of 'Exalted'. Malicious they are, hateful, twisted further by the horrifying gifts given by the Prince of Chaos, yet they always seek more in their never ending quest for magical power."
+#gcost 9965
 #ap 12
 #mapmove 2
 #hp 20
@@ -1222,6 +1253,7 @@
 #startage 150
 #maxage 2500
 #coldres 5
+#chaosrec 12
 #end
 
 -- Sorcerer Lord
@@ -1229,9 +1261,9 @@
 #newmonster 6525
 #spr1 "./Warhammer-Complete/Sorcerer_Lord_1SL.tga"
 #spr2 "./Warhammer-Complete/Sorcerer_Lord_2SL.tga"
-#name "Sorcerer Lord"
+#name "Chaos Sorcerer Lord"
 #nametype 115
-#descr "A Sorcerer Lord is the greatest of the Chaos Sorcerers, the epitome of a Sorcerer, not only in power but also in inhumanity. His understanding of the magical arts have grown exponentially, well beyond those of lesser Sorcerers, as has his depravity; in sheer magical power, he is only second to those who bear the mark of Tzeentch. Yet, his quest for more is unending, no matter the cost to his humanity, if any remains. The Prince of Excess may have gifted the Sorcerer Lord more than any other mortal, but it won't quench his thirst for more. Thus is the way of Chaos."
+#descr "A Chaos Sorcerer Lord is the greatest of the Chaos Sorcerers, the epitome of a Sorcerer, not only in power but also in inhumanity. His understanding of the magical arts has grown exponentially, well beyond those of lesser Sorcerers, as has his depravity; in sheer magical power, he is only second to those who bear the mark of Tzeentch. Yet, his quest for power is unending, no matter the cost to his humanity. Thus is the way of Chaos."
 #ap 12
 #gcost 9940
 #mapmove 2
@@ -1242,7 +1274,7 @@
 #att 10
 #def 10
 #prec 10
-#mr 17
+#mr 18
 #mor 14
 #coldres 5
 #magicskill 7 3 -- Blood
@@ -1258,6 +1290,7 @@
 #holy
 #magicskill 2 4
 #custommagic 384 300 -- AF
+#chaosrec 25
 #end
 
 
@@ -1266,22 +1299,22 @@
 #newmonster 6526
 #spr1 "./Warhammer-Complete/champion_1SL.tga"
 #spr2 "./Warhammer-Complete/champion_2SL.tga"
-#name "Champion"
+#name "Chaos Champion"
 #nametype 115
 #descr "The Champions of Chaos are the greatest fighters of the Chaos worshippers. Their presence on the battlefield can turn the tide of a closely fought combat. The Champions of Slaanesh surrender themselves completely to the excesses that are personified by their god, the Dark Prince."
 #ap 12
 #mapmove 2
-#hp 25
+#hp 20
 #size 2
 #str 15
-#enc 1
+#enc 2
 #att 13
 #def 13
 #prec 12
-#mr 13
+#mr 14
 #mor 17
-#gcost 10000
-#chaosrec 5
+#gcost 10030
+#chaosrec 2
 #rcost 1
 #holy
 #okleader
@@ -1293,7 +1326,6 @@
 #startage 30
 #maxage 1500
 #wastesurvival
-#mountainsurvival
 #coldres 5
 #itemslots 15494
 #xpshape 50
@@ -1305,39 +1337,39 @@
 #newmonster 6527
 #spr1 "./Warhammer-Complete/exalted_champion_1.tga"
 #spr2 "./Warhammer-Complete/exalted_champion_2.tga"
-#name "Exalted Champion"
+#name "Exalted Chaos Champion"
 #nametype 115
-#descr "The Champions of Chaos are some of the greatest fighters of the Chaos worshippers, and often the next step on the path of a Champion towards eventual Daemonhood (or faltering in their path and becoming a Spawn of Chaos) is to become an Exalted Champion, or as they are otherwise known, an Exalted Hero. Armed with an even greater array of Daemonic gifts than a regular Champion, they are, indeed, formidable foes to those who stand before them. They roam across the lands, seeking duels to the death with others of their kind."
+#descr "The Champions of Chaos are some of the greatest fighters of the Chaos worshippers, and often the next step on the path of a Champion towards eventual Daemonhood (or faltering in their path and becoming a Spawn of Chaos) is to become an Exalted Chaos Champion. Armed with an even greater array of Daemonic gifts than a regular Champion, they are, indeed, formidable foes to those who stand before them. They have also gained powers in the cult of Slaanesh, although these are limited."
 #ap 12
 #mapmove 2
 #hp 28
 #size 2
 #str 16
-#enc 1
+#enc 2
 #att 14
 #def 14
-#prec 10
+#prec 12
 #mr 15
-#mor 17
-#gcost 10000
-#chaosrec 8
+#mor 18
+#gcost 10040
+#chaosrec 3
 #rcost 1
 #holy
-#goodleader
-#command -20
 #undcommand 5
-#weapon 1854
 #armor 801
 #armor "Shield"
-#itemslots 7326
+#itemslots 7302
 #startage 70
 #maxage 2500
 #coldres 5
 #awe 1
 #wastesurvival
-#mountainsurvival
 #xpshape 100
 #prophetshape 6528
+#okleader
+#command 20
+#magicskill 8 1
+#weapon 1854
 #end
 
 
@@ -1346,30 +1378,30 @@
 #newmonster 6528
 #spr1 "./Warhammer-Complete/lord_of_slaanesh_1.tga"
 #spr2 "./Warhammer-Complete/lord_of_slaanesh_2.tga"
-#name "Lord of Slaanesh"
+#name "Chaos Lord"
 #nametype 115
-#descr "Of all the mortal warriors across the civilisations of the world, Chaos Lords are the most feared, for they are truly like gods amongst men. The Lord of Slaanesh rides to war on a serpent-like mount of Slaanesh, a daemonic creature gifted to the greatest of Slaanesh's mortal followers, his powers beyond those of any regular Champion."
+#descr "Of all the mortal warriors across the civilisations of the world, Chaos Lords are the most feared, for they are truly like gods amongst men. This Chaos Lord rides to war on a Steed of Slaanesh, a daemonic creature gifted to the greatest of Slaanesh's mortal followers, his powers beyond those of any regular Champion. Although Chaos Lords are not adept at performing the magic rituals necessary to gain Slaanesh's favor, they hold his authority nonetheless."
 #ap 20
 #mapmove 3
 #hp 35
 #size 3
 #ressize 2
 #str 18
-#enc 4
+#enc 3
 #att 16
 #def 16
-#prec 11
+#prec 13
 #mr 17
 #mor 18
 #itemslots 13446
-#weapon "Enchanted Spear"
 #weapon "Aura of Slaanesh"
+#weapon "Enchanted Spear"
 #armor "Full Helmet"
 #armor 801
 #armor "Shield"
 #mounted
-#gcost 10000
-#chaosrec 12
+#gcost 10010
+#chaosrec 8
 #rcost 7
 #holy
 #awe 2
@@ -1379,10 +1411,10 @@
 #goodleader
 #undcommand 5
 #wastesurvival
-#mountainsurvival
 #coldres 5
-#slowrec
 #prophetshape 6534
+#magicskill 7 1
+#magicskill 8 2
 #end
 
 ---- HEROES
@@ -1394,43 +1426,50 @@
 #spr2 "./Warhammer-Complete/dechala_2.tga"
 #name "Denied One"
 #fixedname "Dechala"
-#descr "During the times of Aenarion, Dechala was a beautiful High Elf princess, given to a Daemon Prince of Slaanesh by her family to save their own lives. Driven mad with hatred, Dechala sold her soul to Slaanesh for the chance to exact revenge on her family; Slaanesh accepted, and with His aid, Dechala exacted a terrible and bloody vengeance upon her kinsmen. Now, she is mutated beyond recognition, making her a creature of Chaos more akin to a Daemon than a mortal; she has six arms and her legs have been replaced by the body of a snake. She has beauty that only Slaanesh may grant, but it is as unearthly and disturbing as it is irresistible. Her visage evokes loathing as much as it arouses pleasure."
-#ap 15
+#descr "During the times of Aenarion, Dechala was a beautiful High Elf princess, given to a Daemon Prince of Slaanesh by her family to save their own lives. Slaanesh accepted, but returned her empowered as a Greater Daemon. Dechala then exacted a terrible and bloody vengeance upon her kinsmen, offering them as sacrifices to her Dark Prince. Now, she is mutated beyond recognition, marking her as a creature of Chaos; she has six arms and her legs have been replaced by the body of a snake. She has the otherwordly beauty that only Slaanesh may grant, but it is as unnatural and disturbing as it is irresistible. Her visage evokes loathing as much as it arouses pleasure."
+#ap 16
 #mapmove 3
-#hp 32
+#hp 30
 #size 2
-#str 17
+#str 16
 #enc 1
 #att 16
-#def 14
-#prec 9
+#def 15
+#prec 13
 #mr 16
 #mor 18
 #gcost 0
 #rcost 1
 #ambidextrous 5
+#weapon 1852
 #weapon 1855
 #weapon 1855
 #weapon 1855
 #armor 801
 #startage 4500
 #maxage 20000
-#magicskill 1 2
+#magicskill 5 3
 #itemslots 13470
 #holy
-#invulnerable 10
 #demon
 #goodleader
 #command 40
 #goodundeadleader
 #awe 3
 #female
-#seduce 15
 #onebattlespell "Blessing"
 #wastesurvival
 #forestsurvival
 #fear 5
 #magicpower 1
+#magicskill 7 2
+#magicskill 8 2
+#prot 12
+#heal
+#coldres 10
+#poisonres 10
+#fireres 10
+#shockres 10
 #end
 
 -- Sigvald the Magnificent
@@ -1440,7 +1479,7 @@
 #spr2 "./Warhammer-Complete/sigvald_2.tga"
 #name "Magnificent"
 #fixedname "Sigvald"
-#descr "Though he appears to be little more than sixteen summers of age, Sigvald the Magnificent has blighted the world for over three hundred years. The personification of beauty on the outside, but rot within, Sigvald marches at the head of an army of utterly devoted followers who would give their lives for him without a second thought. Such are the depths of Sigvald's self-obsession that he will even call his retainers to attend him with their mirrors in the midst of battle, preening and murmuring compliments to himself as men plunge into battle and die all around him. Sigvald's baroque armor remains forever untarnished by age or the tiniest fleck of dirt, and warm perfumed air surrounds him even during the fiercest blizzard. The ground itself reshapes itself to let Sigvald pass, and his feet float an inch above the world's surface so that his boots are never touched by the mud or gore of the battlefield."
+#descr "Though he appears to be little more than sixteen summers of age, Sigvald the Magnificent has blighted the world for over three hundred years. Gifted with overwhelming beauty but corrupt to the core, Sigvald marches at the head of an army of utterly devoted followers who would give their lives for him without a second thought. Such are the depths of Sigvald's self-obsession that he will even call his retainers to attend him with their mirrors in the midst of battle, preening and murmuring compliments to himself as men plunge into battle and die all around him. Sigvald's baroque armor remains forever untarnished by age or the tiniest fleck of dirt, and warm perfumed air surrounds him even during the fiercest blizzard. The ground itself reshapes itself to let Sigvald pass, and his feet float an inch above the world's surface so that his boots are never touched by the mud or gore of the battlefield."
 #ap 13
 #mapmove 2
 #enc 1
@@ -1451,35 +1490,37 @@
 #att 16
 #def 13
 #prec 11
-#mr 15
+#mr 18
 #mor 20
 #gcost 0
 #rcost 1
 #itemslots 14470
-#weapon 1858
 #weapon "Aura of Slaanesh"
+#weapon 1858
 #armor 804
 #armor "Shield"
 #startage 350
 #maxage 10000
-#magicskill 1 2
+#magicskill 1 3
 #holy
 #inspirational 1
 #goodleader
-#command 40
-#poorundeadleader
+#goodundeadleader
 #float
-#seduce 20
-#awe 6
-#regeneration 15
-#onebattlespell "Blessing"
-#coldres 5
+#awe 5
+#regeneration 10
 #wastesurvival
-#forestsurvival
 #batstartsum1d6 6546
 #prot 15
 #magicpower 1
 #demon
+#magicskill 8 3
+#magicskill 7 3
+#heal
+#coldres 15
+#poisonres 15
+#fireres 15
+#shockres 15
 #end
 
 -- Sigvald's bodyguards
@@ -1501,7 +1542,7 @@
 #spr2 "./Warhammer-Complete/Styrkaar_2.tga"
 #name "Chosen Servant of Slaanesh"
 #fixedname "Styrkaar"
-#descr "Styrkaar was born to the Jerg of the Sortsvinaer tribe on the northern coast of Norsca. Ever since his childhood, he had been accompanied by a strange voice which bore the name Sle'zuzu, which aided him to do everything right. It was all for the Dark Prince, however; and in the end, as Styrkaar had become the Jerg of his tribe with Sle'zuzu's aid and led them in ever greater raids secretly in the name of the Prince of Chaos, Slaanesh made it known that Styrkaar's actions were indeed pleasing, and fused Styrkaar and Sle'zuzu, whom Styrkaar's warriors knew nothing of. They simply took his change to mean that he had been touched by the gods. And so, as time progressed, his favor with Slaanesh has become increasingly apparent; now, he rides into battle upon a strange serpent-steed. And his fame grows; he is said to have slaughtered another Champion of Slaanesh, Vandred the Majestic, and many warbands that roam the Chaos Wastes of various affiliations."
+#descr "Styrkaar was born to the Jerg of the Sortsvinaer tribe on the northern coast of Norsca. Ever since his childhood, he had been accompanied by a strange voice which bore the name Sle'zuzu, which aided him using mysterious powers. Sle'zuzu revealed himself as a Daemon from the Void, and when Styrkaar had become the chief of his tribe with Sle'zuzu's aid, and led them to ever-greater glory in the name of the Prince of Chaos, Slaanesh made it known that Styrkaar's actions were indeed pleasing, and fused Styrkaar and Sle'zuzu into one body. Styrkaar's warriors knew nothing of this; they simply took his change as a sign of his Gifts. As time progressed, his favor with Slaanesh became increasingly apparent; his humanity is increasingly surpassed by Daemonic traits. And his fame grows; he is said to have defeated and slaughtered another Champion of Slaanesh, Vandred the Majestic, and many warbands that roam the Chaos Wastes of various affiliations."
 #ap 20
 #mapmove 3
 #hp 40
@@ -1514,8 +1555,8 @@
 #prec 11
 #mr 17
 #mor 18
-#magicskill 2 1
-#magicskill 1 1
+#magicskill 2 2
+#magicskill 1 2
 #itemslots 13446
 #weapon "Enchanted Spear"
 #weapon "Aura of Slaanesh"
@@ -1534,9 +1575,13 @@
 #expertleader
 #poorundeadleader
 #wastesurvival
-#mountainsurvival
+
 #onebattlespell "Blessing"
-#coldres 5
+#coldres 10
+#magicpower 1
+#magicskill 7 3
+#magicskill 8 3
+#heal
 #end
 
 -- Azazel the Prince of Damnation
@@ -1546,10 +1591,10 @@
 #spr2 "./Warhammer-Complete/Azazel_2.tga"
 #name "Prince of Damnation"
 #fixedname "Azazel"
-#descr "In the past, Azazel was the chief of the Gerreon tribe, one of the twelve human tribes united by Sigmar, whom Azazel betrayed. After his betrayal, he fled to the Chaos Wastes where he pledged his eternal loyalty to the Dark Prince, and was in return gifted with Daemonhood. Now, he leads the armies of Slaanesh. But he is so much more than just that. Indeed, he sees into the very hearts and souls of men, and even their deepest desires and hidden passions are plain to him. With his silvery voice Azazel whispers to his opponents, promising them all they have ever desired if they abandon the folly of opposing Slaanesh and embrace the Prince of Chaos instead. And few are those who can resist his temptations; all who know of him dread to face him in battle, for the cost of losing to Azazel is not only th death of the body, but the damnation of the soul as well."
+#descr "In the ancient past, Azazel was the chief of the Gerreon tribe, one of the twelve human tribes united by Sigmar, whom Azazel betrayed. After his betrayal, he fled to the Chaos Wastes where he pledged his eternal loyalty to the Dark Prince, and was in return gifted with Daemonhood. Now, he leads the armies of Slaanesh. But he is so much more than just that. Indeed, he sees into the very hearts and souls of men, and even their deepest desires and hidden passions are plain to him. With his silvery voice Azazel whispers to his opponents, promising them all they have ever desired if they abandon the folly of opposing Slaanesh and embrace the Prince of Chaos instead. And few are those who can resist his temptations; all who know of him dread to face him in battle, for the cost of losing to Azazel is not only th death of the body, but the damnation of the soul as well."
 #ap 20
 #mapmove 3
-#hp 96
+#hp 88
 #size 4
 #str 21
 #enc 1
@@ -1560,8 +1605,8 @@
 #mor 30
 #gcost 0
 #rcost 1
-#magicskill 2 2
-#magicskill 1 1
+#magicskill 2 3
+#magicskill 1 3
 #itemslots 15490
 #weapon 1852
 #weapon 1856
@@ -1576,14 +1621,22 @@
 #goodundeadleader
 #awe 4
 #flying
-#magicpower 1
+#magicpower 2
 #demon
 #seduce 20
 #onebattlespell "Divine Blessing"
 #neednoteat
-#coldres 5
-#poisonres 25
-#invulnerable 10
+#coldres 15
+#poisonres 15
+#fireres 15
+#shockres 15
+#prot 15
+#heal
+#fear 5
+#regeneration 10
+#magicskill 7 3
+#magicskill 8 3
+#custommagic 768 100
 #end
 
 
@@ -1627,7 +1680,7 @@
 #pierceres
 #wastesurvival
 #forestsurvival
-#mountainsurvival
+
 #coldres 15
 #itemslots 28672
 #magicpower 1
@@ -1641,28 +1694,25 @@
 #newmonster 6534
 #spr1 "./Warhammer-Complete/chosen_lord_1.tga"
 #spr2 "./Warhammer-Complete/chosen_lord_2.tga"
-#name "Chosen Lord of Slaanesh"
+#name "Chosen Chaos Lord"
 #nametype 115
-#descr "A Chosen Lord of Slaanesh is a Chaos Lord who has advanced even further on the path to Daemonhood than the 'lesser' of their kind, gaining even more gifts from their dark patron than a Lord of Slaanesh, of whom there already are few. Mounted upon a Steed of Slaanesh, his powers are indeed unmatched by nigh any other mortal followers of the Prince of Excess."
-#ap 28
+#descr "This Chaos Lord has advanced even further on the path to Daemonhood than his less-favored fellows, gaining even more gifts from his dark patron in reward. Mounted upon a Steed of Slaanesh, his powers are indeed unmatched by nigh any other mortal follower of the Prince of Excess."
+#ap 24
 #mapmove 3
-#hp 28
+#hp 40
 #size 3
 #ressize 2
-#str 15
-#enc 4
-#att 16
+#str 20
+#enc 3
+#att 18
 #def 16
-#prec 11
-#mr 17
+#prec 14
+#mr 18
 #mor 18
-#magicskill 2 1
-#custommagic 2816 100
-#custommagic 2816 66
 #itemslots 13446
-#weapon "Enchanted Spear"
 #weapon "Aura of Slaanesh"
-#weapon 1220
+#weapon "Enchanted Spear"
+#weapon 1861
 #armor "Full Helmet"
 #armor 801
 #armor "Shield"
@@ -1676,12 +1726,18 @@
 #startage 400
 #maxage 3500
 #expertleader
-#poorundeadleader
+
 #wastesurvival
-#mountainsurvival
-#onebattlespell "Blessing"
-#coldres 5
+
+#coldres 10
 #researchbonus -12
+#poisonres 5
+#fireres 5
+#shockres 5
+#heal
+#okundeadleader
+#magicskill 7 2
+#magicskill 8 3
 #end
 
 ----------- Daemon Summonables ------------
@@ -1702,26 +1758,22 @@
 #str 10
 #enc 1
 #att 10
-#def 12
+#def 11
 #prec 11
-#mr 13
+#mr 14
 #mor 30
 #gcost 0
 #rcost 1
 #itemslots 64640
 #startage 20
 #maxage 10000
-#poisonres 5
 #demon
 #awe 2
 #holy
 #magicpower 1
 #female
-#weapon 1852
 #weapon 1851
 #coldres 10
-#fireres 5
-#shockres 5
 #end
 
 
@@ -1742,17 +1794,15 @@
 #str 12
 #enc 1
 #att 12
-#def 14
+#def 13
 #prec 11
 #mr 14
 #mor 30
 #gcost 0
 #rcost 1
-#weapon 1852
 #itemslots 13440 -- legless and armless
 #startage 20
 #maxage 10000
-#poisonres 5
 #mounted
 #demon
 #awe 2
@@ -1761,8 +1811,6 @@
 #female
 #weapon 1851
 #coldres 10
-#fireres 5
-#shockres 5
 #end
 
 
@@ -1773,10 +1821,10 @@
 #spr2 "./Warhammer-Complete/fiend_2.tga"
 #name "Fiend of Slaanesh"
 #nametype 257
-#descr "Fiends are incredibly swift, able to skitter and scuttle across all manner of terrain at frightening speed. There is something unnameably disturbing about a Fiend's gait, for its twitching dance rocks it from side to side. In this way, a Fiend will take at least three or four steps for every pace it advances, splayed legs beating out an arrhythmic toccata that praises the glory of the Dark Prince of Chaos. The Fiends sing to one another as they run, emanating a high-pitched and pervasive chitter that few mortals consciously hear. Though a Fiend is perhaps frailer than other Daemons of the same stature, only a fool would underestimate its combat prowess."
+#descr "Fiends are incredibly swift, able to skitter and scuttle across all manner of terrain at frightening speed. There is something unnameably disturbing about a Fiend's gait, for its twitching dance rocks it from side to side. In this way, a Fiend will take at least three or four steps for every pace it advances, splayed legs beating out an arrhythmic toccata that praises the glory of the Dark Prince of Chaos. The Fiends sing to one another as they run, emanating a high-pitched and pervasive chitter that few mortals consciously hear. Though a Fiend is perhaps frailer than other Daemons of their size, their razor-sharp talons eviscerate mortal foes before they have the chance to react."
 #ap 26
 #mapmove 3
-#hp 25
+#hp 20
 #prot 11
 #size 3
 #str 14
@@ -1791,17 +1839,16 @@
 #noitem
 #startage 20
 #maxage 10000
-#poisonres 10
+#poisonres 5
 #demon
 #holy
 #awe 1
 #magicpower 1
-#weapon 1852
 #weapon 1851
 #weapon 1851
-#coldres 15
-#fireres 10
-#shockres 10
+#coldres 10
+#fireres 5
+#shockres 5
 #end
 
 
@@ -1823,13 +1870,12 @@
 #att 9
 #def 10
 #prec 8
-#mr 10
+#mr 12
 #mor 30
 #gcost 0
 #rcost 1
 #magicpower 1
 #noitem
-#weapon "Bite"
 #weapon "Claws"
 #startage 20
 #maxage 10000
@@ -1853,12 +1899,12 @@
 #hp 20
 #prot 8
 #size 2
-#str 12
+#str 11
 #enc 1
-#att 13
-#def 13
-#prec 11
-#mr 14
+#att 12
+#def 12
+#prec 12
+#mr 15
 #mor 30
 #gcost 0
 #rcost 1
@@ -1875,7 +1921,6 @@
 #awe 3
 #female
 #okleader
-#expertundeadleader
 #holy
 #magicpower 1
 #stealthy 20
@@ -1883,12 +1928,12 @@
 #magicskill 8 2
 #custommagic 6656 100
 #makemonsters1 6535
-#inquisitor
 #weapon 1854
 #weapon 1854
 #coldres 15
 #fireres 5
 #shockres 5
+#goodundeadleader
 #end
 
 
@@ -1972,12 +2017,12 @@
 #maxage 10000
 #magicskill 2 3
 #magicskill 4 2
-#magicskill 5 3
+#magicskill 5 2
 #magicskill 7 4
 #custommagic 23040 300
 #holy
 #goodleader
-#expertundeadleader
+
 #fear 10
 #awe 6
 #poisonres 20
@@ -1991,6 +2036,7 @@
 #spreaddom 1
 #magicskill 8 4
 #weapon 1855
+#goodundeadleader
 #end
 
 -- Daemon Princess
@@ -2058,19 +2104,19 @@
 #magicskill 1 1
 #magicskill 0 1
 #hp 30
-#mr 24
+#mr 20
 #str 15
 #def 12
-#enc 3
+#enc 1
  #mor 50
 #inanimate
 #magicbeing
 #mapmove 3
-#prec 1
-#att 1
-#ap 15
+#prec 15
+#att 10
+#ap 10
 #size 3
-#enc 0
+#enc 1
 #demon
 #coldres 25
 #poisonres 20
@@ -2079,6 +2125,8 @@
 #weapon "fist"
 #heal
 #awe 4
+#mounted
+#float
 #end
 
 
@@ -2100,7 +2148,7 @@
 #prot 18
 #ap 18
 #mapmove 3
-#mr 24
+#mr 20
 #str 22
 #att 16
 #def 16
@@ -2126,9 +2174,9 @@
 #expertundeadleader
 #fear 10
 #awe 6
+#weapon 1852
 #weapon 1857
 #weapon 1861
-#weapon 1852
 #end
 
 
@@ -2152,17 +2200,17 @@
 #researchlevel 3
 #path 0 7
 #pathlevel 0 2
-#fatiguecost 4000
+#fatiguecost 2100
 #effect 10001
 #damage 6535
-#nreff 8
+#nreff 4
 #end
 
 -- Secondary Daemonette summon and affliction removal
 
 #newspell
 #name "Daemonette summoning"
-#descr "With this spell, the caster summons a group of Daemonettes, the Lesser Daemons of Slaanesh, beings possessed of the hypnotic glamour for which all Daemons of Slaanesh are abhorred."
+#descr "Used in Banquet of Slaanesh"
 #restricted 159
 #school -1
 #path 0 2
@@ -2194,7 +2242,7 @@
 #researchlevel 4
 #path 0 7
 #pathlevel 0 3
-#fatiguecost 2500
+#fatiguecost 2800
 #effect 10001
 #damage 6537
 #nreff 4
@@ -2208,7 +2256,7 @@
 #researchlevel 5
 #path 0 7
 #pathlevel 0 3
-#fatiguecost 2000
+#fatiguecost 3000
 #effect 10001
 #damage 6538
 #nreff 3
@@ -2483,103 +2531,167 @@
 
 #selectnametype 257
 #clear
-#addname "Bloodlust"
-#addname "Deepthrust"
-#addname "Gutblood"
-#addname "Necronheat"
-#addname "Slicecaress"
-#addname "Slaylove"
-#addname "Deathlust"
-#addname "Sweetgore"
-#addname "Killjoy"
-#addname "Lustmurder"
-#addname "Sindeep"
-#addname "Deathcaress"
-#addname "Loveblood"
-#addname "Deepslice"
-#addname "Lovehate"
-#addname "Deathsex"
-#addname "Hotblood"
-#addname "Reamslice"
-#addname "Gorelust"
-#addname "Skinjob"
-#addname "Lovepain"
-#addname "Bloodcaress"
-#addname "Necrobabe"
-#addname "Plungedeep"
-#addname "KillLover"
-#addname "Deadpile"
-#addname "Deathdrinker"
-#addname "Sweetdeath"
-#addname "Deadblood"
-#addname "Murdersweet"
-#addname "Moregore"
-#addname "Painflesh"
-#addname "Gorethrust"
-#addname "Deadringer"
-#addname "Gutlust"
-#addname "Loveslayer"
-#addname "Deathkiss"
-#addname "Deathtouch"
-#addname "Gutslust"
-#addname "Lickslice"
-#addname "Hotslice"
-#addname "Battlelust"
-#addname "Deadsex"
-#addname "Deepbite"
-#addname "Fleshrend"
-#addname "BlackWidow"
-#addname "Fleshflail"
-#addname "Gutslover"
-#addname "Painkiss"
-#addname "Lovedeath"
-#addname "Bellyslice"
-#addname "Fleshthrob"
-#addname "Necrobanger"
-#addname "Gutslove"
-#addname "Fleshpierce"
-#addname "Sinheart"
-#addname "Hatelove"
-#addname "Slicehowl"
-#addname "Sinpain"
-#addname "Heartgore"
-#addname "Grinfang"
-#addname "Killkill"
-#addname "Painlust"
-#addname "Goresweet"
-#addname "Fleshpain"
-#addname "Loonpest"
-#addname "Gutlove"
-#addname "Banegrasp"
-#addname "Darkheart"
-#addname "Screechlick"
-#addname "Deathlove"
-#addname "Fleshspit"
-#addname "Lipsword"
-#addname "Hotflesh"
-#addname "Bellyrip"
-#addname "DeathTouch"
-#addname "Loveguts"
-#addname "Hotquake"
-#addname "Painslut"
-#addname "Cutflesh"
-#addname "Thrusttremble"
-#addname "Bloodbite"
-#addname "Bellypop"
-#addname "Deathwish"
-#addname "Lewdfang"
-#addname "Painlove"
-#addname "Warptongue"
-#addname "Sadomax"
-#addname "Limbsuck"
-#addname "Fiendthrob"
-#addname "Lipspittle"
-#addname "Lewdbeast"
-#addname "Skinwhip"
-#addname "Lustspite"
-#addname "Heartvex"
-#addname "Gristlewhip"
-#addname "Suckflesh"
+#addname "Be'lakor"
+#addname "Morkar"
+#addname "Khaardun"
+#addname "Asavar Kul"
+#addname "Ulgkhar"
+#addname "Balzropht"
+#addname "Sirath"
+#addname "Hazriath"
+#addname "Hemsk Av'Lyd"
+#addname "Kaesoron"
+#addname "Khorybdia"
+#addname "Laesydra"
+#addname "Lilesh"
+#addname "Malyg'nyl"
+#addname "Nashimel"
+#addname "Shyak"
+#addname "Varangallax"
+#addname "Vha'shaelhur"
+#addname "Zhan'naosh"
+#addname "Daerg'gan"
+#addname "Barban Falk"
+#addname "Dhar'leth"
+#addname "G'ellg'aar"
+#addname "Gralastyx"
+#addname "Ingethel"
+#addname "Ka'astellck"
+#addname "Kor Megron"
+#addname "Kor'talor"
+#addname "Lorgar"
+#addname "Malphas"
+#addname "M'kar"
+#addname "Mortechaan"
+#addname "Sindri Myr"
+#addname "Nemerath"
+#addname "Pereklithar"
+#addname "Tkk'arr'quoth"
+#addname "Xorgarth"
+#addname "Arkh'gar"
+#addname "Azariah Kyras"
+#addname "Arkun"
+#addname "Ekrak"
+#addname "Barkor"
+#addname "Khorsen"
+#addname "Kir-Itz"
+#addname "N'Alries"
+#addname "Omphalos"
+#addname "Rulgor"
+#addname "Sh'Karr"
+#addname "Tallomin"
+#addname "Uraka"
+#addname "Baramal"
+#addname "Anexthrok"
+#addname "Cor'bax"
+#addname "Gal'furth"
+#addname "Grulphor"
+#addname "Mamon"
+#addname "Mephedast"
+#addname "Mordokh"
+#addname "Martarion"
+#addname "S'Thell"
+#addname "Abraxes"
+#addname "Corflikh"
+#addname "Istragon"
+#addname "Ghargatuloth"
+#addname "K'tzis'tzar"
+#addname "Kurzz'ak"
+#addname "Phokulozortis"
+#addname "Ti'lath"
+#addname "Zinohk"
+#addname "Vyrokaan"
+#addname "Xyn'goran"
+#addname "Yssarill"
+#addname "Thax'rael"
+#addname "Auloth"
+#addname "Beubkghor"
+#addname "Khanchorus"
+#addname "Kharnagar"
+#addname "Kniir"
+#addname "Kullivar"
+#addname "Lil'een'dow"
+#addname "Malfecius"
+#addname "Marbas"
+#addname "Irathrix"
+#addname "Mukarr'ath"
+#addname "Kaybreinon"
+#addname "Pharaa'guet"
+#addname "Shuukketh"
+#addname "Volgaarax"
+#addname "Cognitae"
+#addname "Makir"
+#addname "Vraksian"
+#addname "Xurunt"
+#addname "Uug'glaw"
+#addname "Balthalamus"
+#addname "Nessiar"
+#addname "Abrial"
+#addname "Adharon"
+#addname "Ahrimin"
+#addname "Anakwanar'sek"
+#addname "Araghazt"
+#addname "Kallorax"
+#addname "Baranuux"
+#addname "Ba'ar Zul"
+#addname "Berossus"
+#addname "Borroleth"
+#addname "Chengrel"
+#addname "Davroth"
+#addname "Drexos"
+#addname "Devram'korda"
+#addname "Doulthekh"
+#addname "Elak Sarda"
+#addname "Eleaxus"
+#addname "Emmesh-Aiye"
+#addname "Enok'innenti"
+#addname "Firaeveus"
+#addname "Gammadin"
+#addname "Ghalabrax"
+#addname "Halasker"
+#addname "Kho'ren'"
+#addname "Hezlokh"
+#addname "Kathal"
+#addname "Kharn"
+#addname "Kelbor-Hal"
+#addname "Kavator"
+#addname "Khuzor"
+#addname "Kolvax"
+#addname "Koros"
+#addname "Kor Phaeron"
+#addname "Kossolax"
+#addname "Kraagon"
+#addname "Kraegax"
+#addname "Kranon"
+#addname "Kyrus"
+#addname "Malek'vos"
+#addname "Makir"
+#addname "Mannu'drath"
+#addname "Mardeghai"
+#addname "Mothac"
+#addname "Nadyzbar"
+#addname "Onnu'praydh'"
+#addname "Paramyx"
+#addname "Paristur"
+#addname "Pater'siin"
+#addname "Ghulglaw"
+#addname "Rynax"
+#addname "Sathash"
+#addname "Scabur'thash"
+#addname "Soktoth"
+#addname "Skchalik"
+#addname "Shon'tu"
+#addname "Tarraq"
+#addname "Umbragh"
+#addname "Urkrathos"
+#addname "Urlock Gaur"
+#addname "Anrathi"
+#addname "Varan'aur"
+#addname "Ygethmor"
+#addname "Zhorisch"
+#addname "Zhufor"
+#addname "Zymran"
+#addname "Necronhet"
 #end
 
 -------- SITES -----------
@@ -2592,7 +2704,7 @@
 #gems 2 2
 #gems 0 1
 #gems 1 1
-#gems 4 3
+#gems 7 2
 #end
 
 #newsite 1951
@@ -2657,12 +2769,12 @@ Priests: Strong, including sorcerer and Daemonic priests. Can blood sacrifice."
 #forestrec 6515 -- Ungor Raider
 #forestrec 6514 -- Ungor
 #forestrec 6513 -- Gor
-#forestrec 6512 -- Slaangor
-#forestrec 6511 -- Minotaur
+--#forestrec 6512 -- Slaangor
+--#forestrec 6511 -- Minotaur
 #addrecunit 6501 -- Marauder #1
 #addrecunit 6502 -- Marauder #2
-#addforeignunit 6544 -- foreignrec Marauder #1
-#addforeignunit 6545 -- foreignrec Marauder #2
+#addforeignunit 6501 
+#addforeignunit 6502 
 #addrecunit 6503 -- Marauder Horsemen
 #addrecunit 6504 -- Warrior of Slaanesh #1
 #addrecunit 6505 -- Warrior of Slaanesh #2
@@ -2683,7 +2795,7 @@ Priests: Strong, including sorcerer and Daemonic priests. Can blood sacrifice."
 
 #addreccom 6510 -- Cultist
 --#addforeigncom 6543 -- foreign Cultist
-#wastecom 6517 -- Forsaken Champion
+#wastecom 6517 -- Forsaken 
 #forestcom 6518 -- Ungor Raider Halfhorn
 #forestcom 6520 -- Wargor
 #forestcom 6519 -- Slaanbull
@@ -2710,7 +2822,7 @@ Priests: Strong, including sorcerer and Daemonic priests. Can blood sacrifice."
 #hero2 6530 -- Sigvald the Magnificent
 #hero3 6531 -- Styrkaar
 #hero4 6532 -- Azazel the Prince of Damnation
-#multihero1 6533 -- Spawn of Slaanesh
+--#multihero1 6533 -- Spawn of Slaanesh
 #multihero2 6534 -- Chosen Lord of Slaanesh
 
 
