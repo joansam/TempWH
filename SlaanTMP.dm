@@ -378,218 +378,6 @@
 #weapon 223
 #end
 
--- Minotaur of Slaanesh
-
-#newmonster 6511
-#spr1 "./Warhammer-Complete/slaan_minotaur_1.tga"
-#spr2 "./Warhammer-Complete/slaan_minotaur_2.tga"
-#name "Minotaur of Slaanesh"
-#nametype 109
-#descr "Minotaurs, also known as Bullgors, are massive monstrosities that constantly hunger for blood and red meat. Even though they're less intelligent than the smaller Beastmen, they are unnaturally strong and powerful, which makes them quite formidable warriors. They gather in loose tribes ruled over by the strongest of their number, and when called to battle, they reach into the piles of weapons and armor heaped in offering before the herdstones, equipping themselves with the largest and most formidable weapons they can find."
-#ap 15
-#mapmove 2
-#hp 26
-#size 3
-#str 17
-#enc 3
-#att 10
-#def 9
-#prec 7
-#prot 5
-#mr 12
-#mor 14
-#gcost 55
-#chaosrec 3
-#rcost 5
-#heal
-#weapon "Broad Sword"
-#weapon 331
-#armor 2
-#armor 9
-#startage 40
-#maxage 500
-#reclimit 4
-#forestsurvival
-#berserk 4
-#trample
-#pillagebonus 1
-#coldres 10
-#end
-
--- Slaangor
-
-#newmonster 6512
-#spr1 "./Warhammer-Complete/slaangor_1.tga"
-#spr2 "./Warhammer-Complete/slaangor_2.tga"
-#name "Slaangor"
-#nametype 109
-#descr "Bestigors of Slaanesh, the Slaangors are, just as their other Bestigor brethren, the strongest and meanest of the Beastmen footsoldiers. Due to their size and ferocity they carve a priviliged position within the warherd, constantly enforcing their superiority upon the Gors and Ungors with random acts of violence. Quite atypically, the Slaangors carry a broadsword and a shield, while usually Bestigors wield massive, two-handed axes. Bestigors generally form a chieftain's inner circle of retainers and enforcers, but it is in their nature to constantly strive for ever greater dominance amongst their tribes, which can often lead them to challenge the leadership of the tribal chieftain."
-#ap 15
-#mapmove 2
-#hp 15
-#size 2
-#str 13
-#enc 2
-#att 12
-#def 10
-#prec 10
-#prot 4
-#mr 13
-#mor 11
-#gcost 35
-#chaosrec 3
-#rcost 4
-#startage 28
-#maxage 200
-#weapon "Broad Sword"
-#armor "Chain Mail Cuirass"
-#armor "Shield"
-#forestsurvival
-#pillagebonus 1
-#awe 1
-#coldres 7
-#end
-
--- Gor of Slaanesh
-
-#newmonster 6513
-#spr1 "./Warhammer-Complete/gor_1SL.tga"
-#spr2 "./Warhammer-Complete/gor_2SL.tga"
-#name "Gor"
-#nametype 109
-#descr "Gors are what form the great mass of the warherds. Their appearance varies, but all combine bestial features with those of a man. The base form of the Beastmen, and that possessed by the vast majority of the Gors, is the hea and legs of a goat and the upper torso of a man, albeit a particularly hairy and malodorous one, even if as creatures of Chaos, there can be great variance from Beastman to Beastman. Regardless of that fact, it is the horns of a Beastman without which one cannot be considered a real Gor. Indeed, in the society of Beastmen, horns are the ultimate mark of rank and power, and their leaders are always those with the largest and most spectacular sets."
-#hp 12
-#size 2
-#mor 10
-#mr 11
-#enc 3
-#str 12
-#att 11
-#def 9
-#prec 10
-#prot 4
-#mapmove 2
-#ap 14
-#gcost 10
-#chaosrec 1
-#rcost 1
-#startage 22
-#maxage 150
-#weapon "Club"
-#pillagebonus 1
-#forestsurvival
-#coldres 7
-#stealthy 0
-#armor "Shield"
-#armor 44
-#end
-
--- Ungor of Slaanesh
-
-#newmonster 6514
-#spr1 "./Warhammer-Complete/ungor_1SL.tga"
-#spr2 "./Warhammer-Complete/ungor_2SL.tga"
-#name "Ungor"
-#nametype 109
-#descr "Ungors are physically weaker than the other Beastmen and their horns, if they have any at all, are less impressive and less numerous. Where the Gors usually have long and spectacular horns as deadly as a sword, Ungors usually, at most, have short prongs or horn buds sprouting from their skulls, which in turn are not recognizable as that of a goat or any other type acknowledged by the Gors. The Ungors occupy the lowest station in the warherd; they must fight for whatever scraps of food left over by the others or try and steal them from the tribe's Warhounds. Regardless of their status, however, they are crucial to the warherd, for it is them who have the dexterity to repair and bind the weaponry of their clumsier Gor brethren; without the Ungors, the other Beastmen would find themselves without weapons."
-#hp 10
-#size 2
-#mor 9
-#mr 10
-#enc 3
-#str 10
-#att 10
-#def 11
-#prec 10
-#mapmove 2
-#ap 14
-#gcost 9
-#chaosrec 1
-#rcost 1
-#startage 20
-#maxage 80
-#weapon "Spear"
- #pillagebonus 1
-#forestsurvival
-#coldres 7
-#armor "Shield"
-#stealthy
-#armor 44
-#end
-
--- Ungor Raider
-
-#newmonster 6515
-#spr1 "./Warhammer-Complete/ungor_raider_1SL.tga"
-#spr2 "./Warhammer-Complete/ungor_raider_2SL.tga"
-#name "Ungor Raider"
-#nametype 109
-#descr "Ungor Raiders are those Ungors tasked with the role of hunting out enemies for the warherds to prey upon. They have a knowledge of the wilderness that is unsurpassed by even the most intelligent Gor, and it is they who sow the seeds of mayhem that soon blossom into full-blown destruction as the rest of the warherd falls upon their victims. Bands of Ungor Raiders range ahead of the warherd as it travels through the lands, sending runners back and forth to ensure the main body of the Beastman army can bring its might to bear."
-#hp 10
-#size 2
-#mor 9
-#mr 10
-#enc 3
-#str 10
-#att 10
-#def 11
-#prec 10
-#mapmove 2
-#ap 14
-#gcost 9
-#chaosrec 1
-#rcost 1
-#startage 20
-#maxage 80
-#pillagebonus 1
-#forestsurvival
-#coldres 7
-#armor 44
-#weapon "Short Bow"
-#stealthy 10
-#end
-
--- Forsaken
-
-#newmonster 6516
-#spr1 "./Warhammer-Complete/forsaken_1SL.tga"
-#spr2 "./Warhammer-Complete/forsaken_2SL.tga"
-#name "Forsaken"
-#nametype 115
-#descr "The Forsaken are those poor souls granted at least one too many 'gifts' by their patron god, their intellect reduced to the level of beasts. Whether it is due to some slight against Slaanesh or for great accomplishments, it does not matter. One thing is certain for the Forsaken, however; in their future looms either death or spawndom."
-#hp 10
-#size 2
-#mor 30
-#mr 14
-#enc 2
-#str 13
-#att 10
-#def 10
-#prec 10
-#mapmove 2
-#ap 12
-#gcost 12
-#chaosrec 1
-#rcost 1
-#itemslots 15488
-#coldres 7
-#weapon 85
-#weapon 600
-#armor "Leather Hauberk"
-#pillagebonus 1
-#wastesurvival
-#forestsurvival
-
-#reclimit 8
-#regeneration 5
-#neednoteat
-#undisciplined
-#berserk 3
-#startage 29
-#maxage 4000
-#montag 69402
-#montag 69402
-#end
 
 -- Marauder of Slaanesh #1
 
@@ -850,10 +638,13 @@
 #prec 10
 #mr 14
 #mor 17
-#gcost 60
+#gcost 70
 #chaosrec 2
 #rcost 1
 #coldres 5
+#weapon 1859
+#armor "Full Helmet"
+#armor "Slaanesh Chaos Armor"
 #armor "Kite Shield"
 #holy
 #itemslots 14470
@@ -861,8 +652,6 @@
 #wastesurvival
 #startage 34
 #maxage 1200
-#armor "Full Helmet"
-#weapon 1859
 #end
 
 -- Chosen of Slaanesh #2
@@ -938,6 +727,221 @@
 #stealthy 20
 #armor "Robes"
 #end
+
+-- Minotaur of Slaanesh
+
+#newmonster 6511
+#spr1 "./Warhammer-Complete/slaan_minotaur_1.tga"
+#spr2 "./Warhammer-Complete/slaan_minotaur_2.tga"
+#name "Minotaur of Slaanesh"
+#nametype 109
+#descr "Minotaurs, also known as Bullgors, are massive monstrosities that constantly hunger for blood and red meat. Even though they're less intelligent than the smaller Beastmen, they are unnaturally strong and powerful, which makes them quite formidable warriors. They gather in loose tribes ruled over by the strongest of their number, and when called to battle, they reach into the piles of weapons and armor heaped in offering before the herdstones, equipping themselves with the largest and most formidable weapons they can find."
+#ap 15
+#mapmove 2
+#hp 26
+#size 3
+#str 17
+#enc 3
+#att 10
+#def 9
+#prec 7
+#prot 5
+#mr 12
+#mor 14
+#gcost 55
+#chaosrec 3
+#rcost 5
+#heal
+#weapon "Broad Sword"
+#weapon 331
+#armor 2
+#armor 9
+#startage 40
+#maxage 500
+#reclimit 4
+#forestsurvival
+#berserk 4
+#trample
+#pillagebonus 1
+#coldres 10
+#end
+
+-- Slaangor
+
+#newmonster 6512
+#spr1 "./Warhammer-Complete/slaangor_1.tga"
+#spr2 "./Warhammer-Complete/slaangor_2.tga"
+#name "Slaangor"
+#nametype 109
+#descr "Bestigors of Slaanesh, the Slaangors are, just as their other Bestigor brethren, the strongest and meanest of the Beastmen footsoldiers. Due to their size and ferocity they carve a priviliged position within the warherd, constantly enforcing their superiority upon the Gors and Ungors with random acts of violence. Quite atypically, the Slaangors carry a broadsword and a shield, while usually Bestigors wield massive, two-handed axes. Bestigors generally form a chieftain's inner circle of retainers and enforcers, but it is in their nature to constantly strive for ever greater dominance amongst their tribes, which can often lead them to challenge the leadership of the tribal chieftain."
+#ap 15
+#mapmove 2
+#hp 15
+#size 2
+#str 13
+#enc 2
+#att 12
+#def 10
+#prec 10
+#prot 4
+#mr 13
+#mor 11
+#gcost 35
+#chaosrec 3
+#rcost 4
+#startage 28
+#maxage 200
+#weapon "Broad Sword"
+#armor "Chain Mail Cuirass"
+#armor "Shield"
+#forestsurvival
+#pillagebonus 1
+#awe 1
+#coldres 7
+#end
+
+-- Gor of Slaanesh
+
+#newmonster 6513
+#spr1 "./Warhammer-Complete/gor_1SL.tga"
+#spr2 "./Warhammer-Complete/gor_2SL.tga"
+#name "Gor"
+#nametype 109
+#descr "Gors are what form the great mass of the warherds. Their appearance varies, but all combine bestial features with those of a man. The base form of the Beastmen, and that possessed by the vast majority of the Gors, is the hea and legs of a goat and the upper torso of a man, albeit a particularly hairy and malodorous one, even if as creatures of Chaos, there can be great variance from Beastman to Beastman. Regardless of that fact, it is the horns of a Beastman without which one cannot be considered a real Gor. Indeed, in the society of Beastmen, horns are the ultimate mark of rank and power, and their leaders are always those with the largest and most spectacular sets."
+#hp 12
+#size 2
+#mor 10
+#mr 11
+#enc 3
+#str 12
+#att 11
+#def 9
+#prec 10
+#prot 4
+#mapmove 2
+#ap 14
+#gcost 10
+#chaosrec 1
+#rcost 1
+#startage 22
+#maxage 150
+#weapon "Club"
+#pillagebonus 1
+#forestsurvival
+#coldres 7
+#stealthy 0
+#armor "Shield"
+#armor 44
+#end
+
+-- Ungor of Slaanesh
+
+#newmonster 6514
+#spr1 "./Warhammer-Complete/ungor_1SL.tga"
+#spr2 "./Warhammer-Complete/ungor_2SL.tga"
+#name "Ungor"
+#nametype 109
+#descr "Ungors are physically weaker than the other Beastmen and their horns, if they have any at all, are less impressive and less numerous. Where the Gors usually have long and spectacular horns as deadly as a sword, Ungors usually, at most, have short prongs or horn buds sprouting from their skulls, which in turn are not recognizable as that of a goat or any other type acknowledged by the Gors. The Ungors occupy the lowest station in the warherd; they must fight for whatever scraps of food left over by the others or try and steal them from the tribe's Warhounds. Regardless of their status, however, they are crucial to the warherd, for it is them who have the dexterity to repair and bind the weaponry of their clumsier Gor brethren; without the Ungors, the other Beastmen would find themselves without weapons."
+#hp 10
+#size 2
+#mor 9
+#mr 10
+#enc 3
+#str 10
+#att 10
+#def 11
+#prec 10
+#mapmove 2
+#ap 14
+#gcost 9
+#chaosrec 1
+#rcost 1
+#startage 20
+#maxage 80
+#weapon "Spear"
+ #pillagebonus 1
+#forestsurvival
+#coldres 7
+#armor "Shield"
+#stealthy
+#armor 44
+#end
+
+-- Ungor Raider
+
+#newmonster 6515
+#spr1 "./Warhammer-Complete/ungor_raider_1SL.tga"
+#spr2 "./Warhammer-Complete/ungor_raider_2SL.tga"
+#name "Ungor Raider"
+#nametype 109
+#descr "Ungor Raiders are those Ungors tasked with the role of hunting out enemies for the warherds to prey upon. They have a knowledge of the wilderness that is unsurpassed by even the most intelligent Gor, and it is they who sow the seeds of mayhem that soon blossom into full-blown destruction as the rest of the warherd falls upon their victims. Bands of Ungor Raiders range ahead of the warherd as it travels through the lands, sending runners back and forth to ensure the main body of the Beastman army can bring its might to bear."
+#hp 10
+#size 2
+#mor 9
+#mr 10
+#enc 3
+#str 10
+#att 10
+#def 11
+#prec 10
+#mapmove 2
+#ap 14
+#gcost 9
+#chaosrec 1
+#rcost 1
+#startage 20
+#maxage 80
+#pillagebonus 1
+#forestsurvival
+#coldres 7
+#armor 44
+#weapon 9
+#weapon "Short Bow"
+#stealthy 10
+#end
+
+-- Forsaken
+
+#newmonster 6516
+#spr1 "./Warhammer-Complete/forsaken_1SL.tga"
+#spr2 "./Warhammer-Complete/forsaken_2SL.tga"
+#name "Forsaken"
+#nametype 115
+#descr "The Forsaken are those poor souls granted at least one too many 'gifts' by their patron god, their intellect reduced to the level of beasts. Whether it is due to some slight against Slaanesh or for great accomplishments, it does not matter. One thing is certain for the Forsaken, however; in their future looms either death or spawndom."
+#hp 10
+#size 2
+#mor 30
+#mr 14
+#enc 2
+#str 13
+#att 10
+#def 10
+#prec 10
+#mapmove 2
+#ap 12
+#gcost 12
+#chaosrec 1
+#rcost 1
+#itemslots 15488
+#coldres 7
+#weapon 85
+#weapon 600
+#armor "Leather Hauberk"
+#pillagebonus 1
+#wastesurvival
+#forestsurvival
+
+#reclimit 8
+#regeneration 5
+#neednoteat
+#undisciplined
+#berserk 3
+#startage 29
+#maxage 4000
+#montag 69402
+#montag 69402
+#end
+
 
 -- Foreignrec Cultist
 
@@ -1041,7 +1045,7 @@
 #descr "Slaanbulls are Doombulls blessed with the mark of Slaanesh. Doombulls are the Lords of the Minotaurs, not so much set apart from their lesser kin by their intelligence but by their sheer animal bloodlust which they can spread to those who surround them. They are capable of leadership, after a fashion; it is a Doombull who bellows the raw will of the Dark Ones, triggering a terrifying stampede that can only end when the horde's unnatural thirst is quenched with the blood of men. As such, meeting them on the battlefield is often a horrifying and bloody affair."
 #ap 16
 #mapmove 2
-#hp 30
+#hp 40
 #size 3
 #str 18
 #enc 2
@@ -1054,7 +1058,7 @@
 #prot 6
 #chaosrec 4
 #rcost 6
-#poorleader
+
 #heal
 #ambidextrous 3
 #weapon 331
@@ -1066,11 +1070,11 @@
 #maxage 500
 #forestsurvival
 #berserk 6
-#awe 1
 #trample
 #pillagebonus 1
 #onebattlespell 917
 #coldres 10
+#goodleader
 #end
 
 -- Wargor
@@ -1176,7 +1180,7 @@
 #custommagic 14336 100 -- NS
 #custommagic 14336 10 -- NSD#rcost 1
 #weapon "Magic Staff"
-#okleader
+
 #forestsurvival
 #startage 55
 #maxage 1500
@@ -1184,6 +1188,7 @@
 #coldres 10
 #gcost 10010
 #holy
+#poorleader
 #end
 
 -- Sorcerer of Slaanesh
@@ -1358,7 +1363,7 @@
 #undcommand 5
 #armor 801
 #armor "Shield"
-#itemslots 7302
+#itemslots 15494
 #startage 70
 #maxage 2500
 #coldres 5
@@ -1521,18 +1526,6 @@
 #poisonres 15
 #fireres 15
 #shockres 15
-#end
-
--- Sigvald's bodyguards
-
-#newmonster 6546
-#copystats 6509
-#spr1 "./Warhammer-Complete/Chosen_Sigvald_1.tga"
-#spr2 "./Warhammer-Complete/Chosen_Sigvald_2.tga"
-#name "Sigvald's Chosen"
-#descr "As Sigvald's utterly devoted elite bodyguards, these Chosen bear mirrored shields so that he may bask in his own divine glory."
-#nametype 257
-#gcost 0
 #end
 
 -- Styrkaar
@@ -1777,6 +1770,57 @@
 #end
 
 
+-- Herald of Slaanesh
+
+#newmonster 6536
+#spr1 "./Warhammer-Complete/forestamazonianchosen1.tga"
+#spr2 "./Warhammer-Complete/forestamazonianchosen2.tga"
+#name "Herald of Slaanesh"
+#nametype 257
+#descr "Heralds of Slaanesh do not only attend to Slaanesh's whimsical desires. Though not poweful sorcerers, they are his ears in enemy lands, and his voice, whispering insidious rumors and corrupting the desires of the local nobility. They can also summon their sisters from the Void."
+#ap 16
+#mapmove 3
+#hp 20
+#prot 8
+#size 2
+#str 11
+#enc 1
+#att 12
+#def 12
+#prec 12
+#mr 15
+#mor 30
+#gcost 0
+#rcost 1
+#ambidextrous 5
+#itemslots 15488
+#weapon 1852
+#startage 20
+#maxage 10000
+#poisonres 5
+#coldres 10
+#shockres 5
+#demon
+#spy
+#awe 3
+#female
+#okleader
+#holy
+#magicpower 1
+#stealthy 20
+#magicskill 7 2
+#magicskill 8 2
+#custommagic 6656 100
+#makemonsters1 6535
+#weapon 1854
+#weapon 1854
+#coldres 15
+#fireres 5
+#shockres 5
+#goodundeadleader
+#end
+
+
 -- Seeker of Slaanesh
 
 #newmonster 6537
@@ -1886,108 +1930,6 @@
 #end
 
 
--- Herald of Slaanesh
-
-#newmonster 6536
-#spr1 "./Warhammer-Complete/forestamazonianchosen1.tga"
-#spr2 "./Warhammer-Complete/forestamazonianchosen2.tga"
-#name "Herald of Slaanesh"
-#nametype 257
-#descr "Heralds of Slaanesh do not only attend to Slaanesh's whimsical desires. Though not poweful sorcerers, they are his ears in enemy lands, and his voice, whispering insidious rumors and corrupting the desires of the local nobility. They can also summon their sisters from the Void."
-#ap 16
-#mapmove 3
-#hp 20
-#prot 8
-#size 2
-#str 11
-#enc 1
-#att 12
-#def 12
-#prec 12
-#mr 15
-#mor 30
-#gcost 0
-#rcost 1
-#ambidextrous 5
-#itemslots 15488
-#weapon 1852
-#startage 20
-#maxage 10000
-#poisonres 5
-#coldres 10
-#shockres 5
-#demon
-#spy
-#awe 3
-#female
-#okleader
-#holy
-#magicpower 1
-#stealthy 20
-#magicskill 7 2
-#magicskill 8 2
-#custommagic 6656 100
-#makemonsters1 6535
-#weapon 1854
-#weapon 1854
-#coldres 15
-#fireres 5
-#shockres 5
-#goodundeadleader
-#end
-
-
--- Exalted Daemon
-
-#newmonster 6543
-#spr1 "./Warhammer-Complete/exalteddaemon1.tga"
-#spr2 "./Warhammer-Complete/exalteddaemon2.tga"
-#name "Exalted Daemon of Slaanesh"
-#nametype 257
-#descr "The favored servants of the Dark Prince sometimes fall just short of full ascension to immortality. Or maybe one of His daemonic servants has proved itself worthy of reward. Either way, Slaanesh grants a mortal host the gift of possession by a powerful daemon, which mutates the host's body to serve its ends. These daemons must constantly exert their will to remain inside the mortal form, and are thus not quite as powerful as Daemon Princes. However, they delight in combat just as much as their brethren, and their magical power is still great by the standard of most mortal spellcasters."
-#ap 20
-#mapmove 3
-#hp 54
-#heal
-#prot 11
-#size 3
-#str 17
-#enc 3
-#att 16
-#def 16
-#prec 13
-#mr 17
-#mor 30
-#gcost 0
-#rcost 1
-#pathcost 50
-#startdom 3
-#coldres 10
-#poisonres 10
-#fireres 10
-#shockres 10
-#itemslots 15494
-#startage 4000
-#maxage 10000
-#magicskill 2 1
-#inspirational 1
-#okleader
-#okundeadleader
-#awe 2
-#demon
-#female
-#magicpower 1
-#magicskill 7 2
-#custommagic 6656 200
-#magicskill 8 2
-#weapon 1852
-#weapon 1855
-#weapon 1851
-#armor 803
-#heal
-#end
-
-
 -- Keeper of Secrets
 
 #newmonster 6540
@@ -2022,7 +1964,6 @@
 #custommagic 23040 300
 #holy
 #goodleader
-
 #fear 10
 #awe 6
 #poisonres 20
@@ -2086,6 +2027,70 @@
 #shockres 15
 #end
 
+
+-- Exalted Daemon
+
+#newmonster 6543
+#spr1 "./Warhammer-Complete/exalteddaemon1.tga"
+#spr2 "./Warhammer-Complete/exalteddaemon2.tga"
+#name "Exalted Daemon of Slaanesh"
+#nametype 257
+#descr "The favored servants of the Dark Prince sometimes fall just short of full ascension to immortality. Or maybe one of His daemonic servants has proved itself worthy of reward. Either way, Slaanesh grants a mortal host the gift of possession by a powerful daemon, which mutates the host's body to serve its ends. These daemons must constantly exert their will to remain inside the mortal form, and are thus not quite as powerful as Daemon Princes. However, they delight in combat just as much as their brethren, and their magical power is still great by the standard of most mortal spellcasters."
+#ap 20
+#mapmove 3
+#hp 54
+#heal
+#prot 11
+#size 3
+#str 17
+#enc 3
+#att 16
+#def 16
+#prec 13
+#mr 17
+#mor 30
+#gcost 0
+#rcost 1
+#pathcost 50
+#startdom 3
+#coldres 10
+#poisonres 10
+#fireres 10
+#shockres 10
+#itemslots 15494
+#startage 4000
+#maxage 10000
+#magicskill 2 1
+#inspirational 1
+#okleader
+#okundeadleader
+#awe 2
+#demon
+#female
+#magicpower 1
+#magicskill 7 2
+#custommagic 6656 200
+#magicskill 8 2
+#weapon 1852
+#weapon 1855
+#weapon 1851
+#armor 803
+#heal
+#end
+
+
+-- Sigvald's bodyguards
+
+#newmonster 6546
+#copystats 6509
+#spr1 "./Warhammer-Complete/Chosen_Sigvald_1.tga"
+#spr2 "./Warhammer-Complete/Chosen_Sigvald_2.tga"
+#name "Sigvald's Chosen"
+#descr "As Sigvald's utterly devoted elite bodyguards, these Chosen bear mirrored shields so that he may bask in his own divine glory."
+#nametype 257
+#gcost 0
+#end
+
 ----------- PRETENDERS - Avatars of Slaanesh
 
 -- Sorcerer Lord of Slaanesh
@@ -2132,7 +2137,7 @@
 
 -- Avatar Daemonic shape
 #newmonster 4214
-#nametype 115
+#nametype 257
 #startdom 3
 #gcost 10000
 #pathcost 60
@@ -2154,7 +2159,6 @@
 #def 16
 #enc 1
 #prec 15
-#ambidextrous 3
 #mor 50
 #inanimate
 #demon

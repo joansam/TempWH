@@ -66,7 +66,7 @@ Dwarf clan king not accompanied by retinue like it says...also something about h
 -- Exalted sorc description fix
 -- Decreased cost of sorc and exalted sorc by 5...apparently something is putting them 5 over the value shown in the inspector.
 -- Increased base rescost of mounted marauder to 6 and knight to 20, as per vanilla standards.
--- Daemon-forged blade was an intrinsic weapon, now it isn't.
+-- Daemon-forged blade no longer AP, 3 attacks instead of 2. Was an intrinsic weapon, now it isn't.
 
 FINISHED CHANGES:
 
